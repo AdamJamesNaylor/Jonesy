@@ -10,7 +10,7 @@ namespace AJN.Jonesy.Website.Controllers {
             _questionService = questionService;
         }
 
-        [Route("{id}/{text}")]
+        [Route("questions/{id}/{text}")]
         public ActionResult Get(int id) {
 
             var question = _questionService.Get(id);

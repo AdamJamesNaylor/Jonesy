@@ -1,6 +1,6 @@
 <questions>
   <question id="123">
-    <text>How many items can you carry.</text>
+    <text>How many items can you carry?</text>
     <answer>
       <text>42!</text>
     </answer>
