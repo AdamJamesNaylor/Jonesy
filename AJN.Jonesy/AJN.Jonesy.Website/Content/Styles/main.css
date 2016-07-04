@@ -12,6 +12,10 @@ a {
     color: #242729;
 }
 
+h1 {
+    margin: 40px 0;
+}
+
 .container {
     margin: 0 auto;
     width: 100%;
@@ -22,9 +26,25 @@ a {
     width: 1060px;
 }
 
-.green-strip {
-    background: #86b854;
-    padding: 20px 0 20px;
+header.content {
+    padding: 40px 0;
+    border-bottom: 1px #ccc solid;
+}
+
+a.logo {
+    background-image: url('/Content/Images/minecraft-answers-logo.png');
+    background-position: top left;
+    background-repeat: no-repeat;
+
+    display: block;
+    width: 345px;
+    height: 62px;
+    text-indent: -999999em;
+}
+
+.strip {
+    background: #69a9a9;
+    padding: 40px 0;
     margin: 30px 0;
 }
 

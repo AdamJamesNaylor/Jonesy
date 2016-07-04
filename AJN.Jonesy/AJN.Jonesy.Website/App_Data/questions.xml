@@ -5,4 +5,10 @@
       <text>42!</text>
     </answer>
   </question>
+  <question id="1234">
+    <text>How many items can you place in a double chest?</text>
+    <answer>
+      <text>54 stacks (3456 maximum possible items)</text>
+    </answer>
+  </question>
 </questions>
