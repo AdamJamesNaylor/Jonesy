@@ -1,14 +1,14 @@
 <questions>
   <question id="123">
-    <text>How many items can you carry?</text>
+    <text>How many items can be stored in the inventory?</text>
     <answer>
-      <text>42!</text>
+      <text><![CDATA[<p>41.</p><p>9 in the hotbar, 27 in the main inventory, 4 armour slots and 1 off-hand slot.</p>]]></text>
     </answer>
   </question>
   <question id="1234">
-    <text>How many items can you place in a double chest?</text>
+    <text>How many items can be stored in a double chest?</text>
     <answer>
-      <text>54 stacks (3456 maximum possible items)</text>
+      <text><![CDATA[<p>54 stacks.</p><p>3456 individual items.</p>]]></text>
     </answer>
   </question>
 </questions>

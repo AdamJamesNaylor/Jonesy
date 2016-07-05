@@ -1,4 +1,5 @@
 ﻿namespace AJN.Jonesy.Business.Services {
+    using System.Collections.ObjectModel;
     using System.IO;
     using System.Linq;
     using System.Xml.Linq;
@@ -12,18 +13,29 @@
         }
 
         public Question Get(int id) {
-            string strId = id.ToString();
 
             string file = Path.Combine(_appDataPath, "questions.xml");
             var questions = XElement.Load(file);
 
+            string strId = id.ToString();
             var question = questions.Descendants("question")
                 .FirstOrDefault(q => q.Attribute("id").Value == strId);
 
             if (question == null)
                 return null; //should log this or throw
 
-            return ParseQuestion(question);
+            var result = ParseQuestion(question);
+            result.SimilarQuestions = GetSimilarQuestions(result);
+            return result;
+        }
+
+        public Collection<Question> GetSimilarQuestions(Question question) {
+            string file = Path.Combine(_appDataPath, "questions.xml");
+            var questions = XElement.Load(file);
+
+            var similarQuestion = questions.Descendants("question").Where(q => q.Attribute("id").Value != question.Id.ToString());
+
+            return new Collection<Question>(similarQuestion.Select(ParseQuestion).ToList());
         }
 
         private Question ParseQuestion(XElement question) {
@@ -34,7 +46,7 @@
             return new Question {
                 Id = int.Parse(id),
                 Text = text,
-                Answer = answer
+                Answer = answer,
             };
         }
 
