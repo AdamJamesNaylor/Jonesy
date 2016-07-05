@@ -70,6 +70,11 @@ a.logo {
     border-bottom: 1px solid #aaa;
 }
 
-h2 {
-    
+.more-details {
+    padding-bottom: 30px;
+    border-bottom: 1px #ccc solid;
+}
+
+.leaderboard-advert {
+    margin: 40px 0;
 }

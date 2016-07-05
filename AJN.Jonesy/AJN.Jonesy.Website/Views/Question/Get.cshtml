@@ -21,11 +21,25 @@
 </div>
 
 <div class="content">
-    @if (!string.IsNullOrEmpty(Model.Details)) {
-        <div>
+    
+    @if (!string.IsNullOrEmpty(Model.Answer.Details)) {
+        <div class="more-details">
             <h2>More details</h2>
+            @Html.Raw(Model.Answer.Details)
         </div>
     }
+
+    <div class="leaderboard-advert">
+        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <!-- Minecraft Answers Leaderboard -->
+        <ins class="adsbygoogle"
+             style="display: inline-block; width: 728px; height: 90px"
+             data-ad-client="ca-pub-7142257795026948"
+             data-ad-slot="7341884437"></ins>
+        <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+    </div>
 
     <div>
         <h2>Similar questions</h2>

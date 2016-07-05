@@ -52,9 +52,15 @@
 
         private Answer ParseAnswer(XElement answer) {
             var text = answer.Element("text").Value;
-            return new Answer {
+            var result = new Answer {
                 Text = text
             };
+
+            var details = answer.Element("details");
+            if (details != null)
+                result.Details = details.Value;
+
+            return result;
         }
 
         private readonly string _appDataPath;

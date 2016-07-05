@@ -2,13 +2,28 @@
   <question id="123">
     <text>How many items can be stored in the inventory?</text>
     <answer>
-      <text><![CDATA[<p>41.</p><p>9 in the hotbar, 27 in the main inventory, 4 armour slots and 1 off-hand slot.</p>]]></text>
+      <text><![CDATA[<p>41 stacks.</p>]]></text>
+      <details>
+        <![CDATA[<p>9 stacks can be stored in the hotbar, 27 in the main inventory, 4 armour slots and 1 off-hand slot.</p>]]>
+      </details>
     </answer>
+    <audit>
+      <created datetime="2016-07-05T17:30" by="0"></created>
+      <!--<modified datetime="" by=""></modified>-->
+      <!--
+      <verified datetime="" by="">
+        <version edition="Computer" releaseNumber="1.10" />
+      </verified>
+      -->
+    </audit>
   </question>
   <question id="1234">
     <text>How many items can be stored in a double chest?</text>
     <answer>
-      <text><![CDATA[<p>54 stacks.</p><p>3456 individual items.</p>]]></text>
+      <text><![CDATA[<p>54 stacks.</p>]]></text>
+      <details>
+        <![CDATA[<p>54 stacks of items works out as a total of 3456 individual items. Assuming all items can be stacked up to 64.</p>]]>
+      </details>
     </answer>
   </question>
 </questions>
