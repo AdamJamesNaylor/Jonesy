@@ -6,24 +6,22 @@
     Layout = "~/Views/Shared/_QuestionLayout.cshtml";
 }
 
-<div class="content" itemscope itemtype="http://schema.org/Question">
+<div class="column" itemscope itemtype="http://schema.org/Question">
     <h1 itemprop="name"> <!--itemprop="text"?-->
         <a href="@QuestionUrlParser.Generate(Model)" class="question-hyperlink">@Model.Text</a>
     </h1>
 </div>
 
 <div class="strip">
-    <div class="content">
-        <div class="answer" itemscope itemtype="http://schema.org/Answer">
+    <div class="column answer" itemscope itemtype="http://schema.org/Answer">
             @Html.Raw(Model.Answer.Text)
-        </div>
     </div>
 </div>
 
-<div class="content">
+<div class="column">
     
     @if (!string.IsNullOrEmpty(Model.Answer.Details)) {
-        <div class="more-details">
+        <div class="details">
             <h2>More details</h2>
             @Html.Raw(Model.Answer.Details)
         </div>

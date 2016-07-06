@@ -1,10 +1,12 @@
 ﻿body {
     font-family: Arial,"Helvetica Neue",Helvetica,sans-serif;
-    font-size: 13px;
+    font-size: 14px;
     line-height: 1.3em;
     color: #242729;
     background: #FFF;
     margin: 0;
+    min-width: 1060px;
+
 }
 
 a {
@@ -13,28 +15,36 @@ a {
 }
 
 h1 {
-    margin: 40px 0;
+    margin: 0;
 }
 
-.container {
-    margin: 0 auto;
-    width: 100%;
-}
-
-.content {
-    margin: 0 auto;
-    width: 1060px;
-}
-
-header.content {
+header {
     padding: 40px 0;
     border-bottom: 1px #ccc solid;
 }
 
-a.logo {
+header.column {
+    margin-bottom: 30px;
+}
+
+footer {
+    background: #6b6b6b;
+    color: #c0cad4;
+    height: 200px;
+    margin-top: 40px;
+    padding: 40px 0;
+}
+
+.container {
+    min-height: 700px;
+}
+.column {
+    margin: 0 auto;
+    width: 1060px;
+}
+
+.logo {
     background-image: url('/Content/Images/minecraft-answers-logo.png');
-    background-position: top left;
-    background-repeat: no-repeat;
 
     display: block;
     width: 345px;
@@ -46,23 +56,22 @@ a.logo {
     background: #69a9a9;
     padding: 40px 0;
     margin: 30px 0;
+    color: #fff;
 }
 
 .question-hyperlink {
     font-weight: bold;
-    font-size: 38px;
+    font-size: 1.5em;
     line-height: normal;
 }
 
 .answer {
-    font-size: 48px;
-    color: #fff;
+    font-size: 3.5em;
     line-height: normal;
-    margin: 0;
 }
 
 .answer p {
-    margin: 10px;
+    margin: 10px 0;
 }
 
 .answer-details {
@@ -70,11 +79,21 @@ a.logo {
     border-bottom: 1px solid #aaa;
 }
 
-.more-details {
+.details {
     padding-bottom: 30px;
     border-bottom: 1px #ccc solid;
 }
 
 .leaderboard-advert {
-    margin: 40px 0;
+    margin: 40px auto;
+    width: 728px;
+}
+
+.welcome {
+    color: #fff;
+    line-height: normal;
+}
+
+.welcome * h1 {
+    font-size: 24px;
 }

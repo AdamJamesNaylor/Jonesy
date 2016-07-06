@@ -1,0 +1,37 @@
+﻿@using AJN.Jonesy.Business
+@model AJN.Jonesy.Website.Models.HomeViewModel
+@{
+    ViewBag.Title = "Minecraft Answers - Simple anwers for every question.";
+    Layout = "~/Views/Shared/_QuestionLayout.cshtml";
+}
+
+<div class="strip welcome">
+    <div class="column">
+        <h1>Welcome to Minecraft Answers</h1>
+    </div>
+</div>
+<div class="column">
+    <div class="details">
+        <p>Here you will find simple answers to every question in Mojang's popular sandbox construction game Minecraft.</p>
+    </div>
+    <h2>Some popular questions to get you started</h2>
+    <ul>
+        @foreach (var question in Model.PopularQuestions) {
+            <li>
+                <a href="@QuestionUrlParser.Generate(question)">@question.Text</a>
+            </li>
+        }
+    </ul>
+</div>
+
+<div class="leaderboard-advert">
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <!-- Minecraft Answers Leaderboard -->
+    <ins class="adsbygoogle"
+         style="display: inline-block; width: 728px; height: 90px"
+         data-ad-client="ca-pub-7142257795026948"
+         data-ad-slot="7341884437"></ins>
+    <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</div>

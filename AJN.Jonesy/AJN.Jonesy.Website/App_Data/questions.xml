@@ -2,9 +2,9 @@
   <question id="123">
     <text>How many items can be stored in the inventory?</text>
     <answer>
-      <text><![CDATA[<p>41 stacks.</p>]]></text>
+      <text><![CDATA[<p>37 stacks &amp; 4 pieces of armour.</p>]]></text>
       <details>
-        <![CDATA[<p>9 stacks can be stored in the hotbar, 27 in the main inventory, 4 armour slots and 1 off-hand slot.</p>]]>
+        <![CDATA[<p>27 stacks can be stored in the main inventory, 9 in the hotbar, 1 off-hand slot and 4 armour slots. Giving a potential maximum of 2372 individual items.</p>]]>
       </details>
     </answer>
     <audit>

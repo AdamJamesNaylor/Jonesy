@@ -29,6 +29,20 @@
             return result;
         }
 
+        public Collection<Question> GetPopularQuestions() {
+            var allQuestions = List();
+            return new Collection<Question>(allQuestions.Take(5).ToList());
+        }
+
+        public Collection<Question> List() {
+            string file = Path.Combine(_appDataPath, "questions.xml");
+            var questions = XElement.Load(file);
+
+            var popularQuestions = questions.Descendants("question");
+
+            return new Collection<Question>(popularQuestions.Select(ParseQuestion).ToList());
+        }
+
         public Collection<Question> GetSimilarQuestions(Question question) {
             string file = Path.Combine(_appDataPath, "questions.xml");
             var questions = XElement.Load(file);
