@@ -26,4 +26,85 @@
       </details>
     </answer>
   </question>
+
+  <question id="1">
+    <text>How fast can the player run?</text>
+    <answer>
+      <text><![CDATA[<p>About 5.612 blocks per second.</p>]]></text>
+      <details>
+        <![CDATA[<p>Sprinting is 30% faster than walking.</p>]]>
+      </details>
+    </answer>
+  </question>
+
+  <question id="2">
+    <text>What's the fastest form of travel over long distance?</text>
+    <answer>
+      <text><![CDATA[<p>Throwing enderpearls.</p>]]></text>
+      <details>
+        <![CDATA[<p>A thrown enderpearl has a chance of traveling up to slightly over 54 blocks, with a flight time of around 3 seconds. This gives a travel speed of 54 / 3 = ~18 blocks per second.</p>]]>
+      </details>
+    </answer>
+  </question>
+
+  <question id="3">
+    <text>Which blocks are effected by gravity?</text>
+    <answer>
+      <text><![CDATA[<p>Sand, gravel, dragon eggs and anvils.</p>]]></text>
+      <details>
+        <![CDATA[<p>TNT blocks won't fall until they are primed.</p>]]>
+      </details>
+    </answer>
+  </question>
+
+  <question id="4">
+    <text>How do you drop a stack of items?</text>
+    <answer>
+      <text><![CDATA[<p>Ctrl + Q.</p>]]></text>
+      <details>
+        <![CDATA[<p>You can also drop stacks by picking one up in the inventory screen and clicking outside the inventory window. Also exiting the inventory screen once a stack has been picked up will drop it.</p>]]>
+      </details>
+    </answer>
+  </question>
+
+  <question id="5">
+    <text>How popular is Minecraft?</text>
+    <answer>
+      <text><![CDATA[<p>Minecraft is the second best selling computer game on all platforms.</p>]]></text>
+      <details>
+        <![CDATA[<p>Second only to Tetris and selling 106.86 million copies world wide.</p>]]>
+      </details>
+    </answer>
+  </question>
+
+  <question id="6">
+    <text>How do you get Minecraft?</text>
+    <answer>
+      <text><![CDATA[<p>Minecraft can be purchased from the Minecraft.net store.</p>]]></text>
+      <details>
+        <![CDATA[<p>Alternatively you can buy download cards from certain stores which you can use to redeem online.</p>]]>
+      </details>
+    </answer>
+  </question>
+
+  <question id="7">
+    <text>What age is minecraft rated for?</text>
+    <answer>
+      <text><![CDATA[<p>PEGI 7.</p>]]></text>
+      <details>
+        <![CDATA[<p>Although you have to be 13 to purchase an account with Mojang you do not need to be this age to play.</p>]]>
+      </details>
+    </answer>
+  </question>
+
+  <question id="8">
+    <text>How much does minecraft cost?</text>
+    <answer>
+      <text><![CDATA[<p>&#36;26.95 USD.</p>]]></text>
+      <details>
+        <![CDATA[<p>Check Minecraft.net for your local exchange rates.</p>]]>
+      </details>
+    </answer>
+  </question>
+
 </questions>
