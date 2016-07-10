@@ -93,6 +93,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Data\questions.xml" />
+    <Content Include="Content\Images\minecraft-answered-logo.png" />
     <Content Include="Content\Images\minecraft-answers-logo.png" />
     <Content Include="Content\Styles\main.css" />
     <Content Include="Global.asax" />

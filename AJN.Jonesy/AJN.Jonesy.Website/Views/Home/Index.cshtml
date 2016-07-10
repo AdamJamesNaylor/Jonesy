@@ -1,29 +1,33 @@
 ﻿@using AJN.Jonesy.Business
 @model AJN.Jonesy.Website.Models.HomeViewModel
 @{
-    ViewBag.Title = "Minecraft Answers - Simple anwers for every question.";
+    ViewBag.Title = "Minecraft Answered - Simple anwers for every question.";
     Layout = "~/Views/Shared/_QuestionLayout.cshtml";
 }
 
 <div class="strip welcome">
     <div class="column">
-        <h1>Welcome to Minecraft Answers</h1>
+        <h1>Welcome to Minecraft Answered</h1>
     </div>
 </div>
 <div class="column">
     <div class="details">
         <p>Here you will find simple answers to every question in Mojang's popular sandbox construction game Minecraft.</p>
         <p>Each answer covers predominately the latest official vanilla version of Minecraft.</p>
-        <p>If you would like further in-depth information about a given topic it is worth reading the <a href="http://minecraft.gamepedia.com/">official Minecraft wiki</a>.</p>
+        <p>If you would like further in-depth information about a given topic it is worth reading the <a href="http://minecraft.gamepedia.com/">official Minecraft wiki</a>.
+        </p>
     </div>
-    <h2>Some popular questions to get you started</h2>
-    <ul>
-        @foreach (var question in Model.PopularQuestions) {
-            <li>
-                <a href="@QuestionUrlParser.Generate(question)">@question.Text</a>
-            </li>
-        }
-    </ul>
+    <div class="links">
+        <h2>Some popular questions to get you started</h2>
+        <ul>
+            @foreach (var question in Model.PopularQuestions)
+            {
+                <li>
+                    <a href="@QuestionUrlParser.Generate(question)">@question.Text</a>
+                </li>
+            }
+        </ul>
+    </div>
 </div>
 
 <div class="leaderboard-advert">

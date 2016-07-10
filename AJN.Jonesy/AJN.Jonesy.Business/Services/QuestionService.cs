@@ -3,13 +3,15 @@
     using System.IO;
     using System.Linq;
     using System.Xml.Linq;
+    using Common;
     using Model;
 
     public class QuestionService
         : IQuestionService {
 
-        public QuestionService(string appDataPath) {
+        public QuestionService(string appDataPath, IQuestionXmlParser questionXmlParser) {
             _appDataPath = appDataPath;
+            _questionXmlParser = questionXmlParser;
         }
 
         public Question Get(int id) {
@@ -22,9 +24,9 @@
                 .FirstOrDefault(q => q.Attribute("id").Value == strId);
 
             if (question == null)
-                return null; //should log this or throw
+                return null; //todo should log this or throw
 
-            var result = ParseQuestion(question);
+            var result = _questionXmlParser.Parse(question);
             result.SimilarQuestions = GetSimilarQuestions(result);
             return result;
         }
@@ -40,43 +42,21 @@
 
             var popularQuestions = questions.Descendants("question");
 
-            return new Collection<Question>(popularQuestions.Select(ParseQuestion).ToList());
+            return new Collection<Question>(popularQuestions.Select(_questionXmlParser.Parse).ToList());
         }
 
         public Collection<Question> GetSimilarQuestions(Question question) {
             string file = Path.Combine(_appDataPath, "questions.xml");
             var questions = XElement.Load(file);
 
-            var similarQuestion = questions.Descendants("question").Where(q => q.Attribute("id").Value != question.Id.ToString());
+            var similarQuestions =
+                questions.Descendants("question").Where(q => q.Attribute("id").Value != question.Id.ToString());
 
-            return new Collection<Question>(similarQuestion.Select(ParseQuestion).ToList());
-        }
-
-        private Question ParseQuestion(XElement question) {
-
-            var id = question.Attribute("id").Value;
-            var text = question.Element("text").Value;
-            var answer = ParseAnswer(question.Element("answer"));
-            return new Question {
-                Id = int.Parse(id),
-                Text = text,
-                Answer = answer,
-            };
-        }
-
-        private Answer ParseAnswer(XElement answer) {
-            var text = answer.Element("text").Value;
-            var result = new Answer {
-                Text = text
-            };
-
-            var details = answer.Element("details");
-            if (details != null)
-                result.Details = details.Value;
-
-            return result;
+            return new Collection<Question>(similarQuestions.TakeRandom(5).Select(_questionXmlParser.Parse).ToList());
         }
 
         private readonly string _appDataPath;
+        private readonly IQuestionXmlParser _questionXmlParser;
     }
+
 }

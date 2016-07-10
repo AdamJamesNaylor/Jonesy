@@ -1,7 +1,6 @@
 ﻿body {
     font-family: Arial,"Helvetica Neue",Helvetica,sans-serif;
     font-size: 14px;
-    line-height: 1.3em;
     color: #242729;
     background: #FFF;
     margin: 0;
@@ -27,6 +26,10 @@ header.column {
     margin-bottom: 30px;
 }
 
+h2 {
+    font-size: 2em;
+}
+
 footer {
     background: #6b6b6b;
     color: #c0cad4;
@@ -41,14 +44,15 @@ footer {
 .column {
     margin: 0 auto;
     width: 1060px;
+    padding-left: 15px;
 }
 
 .logo {
-    background-image: url('/Content/Images/minecraft-answers-logo.png');
+    background-image: url('/Content/Images/minecraft-answered-logo.png');
 
     display: block;
-    width: 345px;
-    height: 62px;
+    width: 358px;
+    height: 67px;
     text-indent: -999999em;
 }
 
@@ -84,6 +88,11 @@ footer {
     border-bottom: 1px #ccc solid;
 }
 
+.links a {
+    font-size: 1.5em;
+    line-height: 1.5em;
+}
+
 .leaderboard-advert {
     margin: 40px auto;
     width: 728px;
@@ -95,5 +104,5 @@ footer {
 }
 
 .welcome * h1 {
-    font-size: 24px;
+    font-size: 3em;
 }

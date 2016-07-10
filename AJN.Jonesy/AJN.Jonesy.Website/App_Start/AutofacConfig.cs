@@ -13,8 +13,10 @@ namespace AJN.Jonesy.Website {
         public static void RegisterDependencies() {
             var builder = new ContainerBuilder();
 
+            builder.Register<IQuestionXmlParser>(c => new QuestionXmlParser()).InstancePerRequest();
+
             var appDataPath = HostingEnvironment.MapPath("~/app_data");
-            builder.Register<IQuestionService>(c => new QuestionService(appDataPath)).InstancePerRequest();
+            builder.Register<IQuestionService>(c => new QuestionService(appDataPath, c.Resolve<IQuestionXmlParser>())).InstancePerRequest();
 
             builder.RegisterControllers(typeof(QuestionController).Assembly);
 

@@ -9,12 +9,10 @@
     </answer>
     <audit>
       <created datetime="2016-07-05T17:30" by="0"></created>
-      <!--<modified datetime="" by=""></modified>-->
-      <!--
-      <verified datetime="" by="">
+      <modified datetime="2016-07-05T17:30" by="0"></modified>
+      <verified datetime="2016-07-05T17:30" by="0">
         <version edition="Computer" releaseNumber="1.10" />
       </verified>
-      -->
     </audit>
   </question>
   <question id="1234">
@@ -40,9 +38,9 @@
   <question id="2">
     <text>What's the fastest form of travel over long distance?</text>
     <answer>
-      <text><![CDATA[<p>Throwing enderpearls.</p>]]></text>
+      <text><![CDATA[<p>Throwing ender pearls.</p>]]></text>
       <details>
-        <![CDATA[<p>A thrown enderpearl has a chance of traveling up to slightly over 54 blocks, with a flight time of around 3 seconds. This gives a travel speed of 54 / 3 = ~18 blocks per second.</p>]]>
+        <![CDATA[<p>A thrown ender pearl has a chance of traveling up to slightly over 54 blocks, with a flight time of around 3 seconds. This gives a travel speed of 54 / 3 = ~18 blocks per second.</p>]]>
       </details>
     </answer>
   </question>

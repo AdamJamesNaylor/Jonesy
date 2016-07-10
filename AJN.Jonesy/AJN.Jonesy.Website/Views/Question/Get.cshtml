@@ -39,10 +39,11 @@
         </script>
     </div>
 
-    <div>
+    <div class="links">
         <h2>Similar questions</h2>
         <ul>
-            @foreach (var question in Model.SimilarQuestions) {
+            @foreach (var question in Model.SimilarQuestions)
+            {
                 <li>
                     <a href="@QuestionUrlParser.Generate(question)">@question.Text</a>
                 </li>
