@@ -69,6 +69,18 @@ footer {
     line-height: normal;
 }
 
+.audit {
+    color: #bbb;
+    padding-top: 10px;
+}
+
+.audit.verified {
+    color: #82ca82;
+}
+.audit.unverified {
+    color: #ff9d9d;
+}
+
 .answer {
     font-size: 3.5em;
     line-height: normal;

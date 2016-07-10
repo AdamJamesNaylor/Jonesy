@@ -1,32 +1,55 @@
-﻿@using AJN.Jonesy.Business
+﻿@using System.Globalization
+@using AJN.Jonesy.Business
 @model AJN.Jonesy.Model.Question
 
 @{
     ViewBag.Title = Model.Text;
     Layout = "~/Views/Shared/_QuestionLayout.cshtml";
+    var longDatePattern = CultureInfo.CurrentCulture.DateTimeFormat.LongDatePattern;
+    var fullDateTimePattern = CultureInfo.CurrentCulture.DateTimeFormat.FullDateTimePattern;
 }
 
 <div class="column" itemscope itemtype="http://schema.org/Question">
     <h1 itemprop="name"> <!--itemprop="text"?-->
         <a href="@QuestionUrlParser.Generate(Model)" class="question-hyperlink">@Model.Text</a>
     </h1>
+    <div class="audit">
+        Asked on <span itemprop="dateCreated" title="@Model.Audit.Created.On.ToString(fullDateTimePattern)">@Model.Audit.Created.On.ToString(longDatePattern)</span> by <span itemprop="creator">Admin</span>
+    </div>
 </div>
 
-<div class="strip">
-    <div class="column answer" itemscope itemtype="http://schema.org/Answer">
+<div itemscope itemtype="http://schema.org/Answer">
+    <div class="strip">
+        <div class="column answer">
             @Html.Raw(Model.Answer.Text)
+        </div>
+    </div>
+
+    <div class="column">
+
+        @if (!string.IsNullOrEmpty(Model.Answer.Details)) {
+            <div class="details">
+                <h2>More details</h2>
+                @Html.Raw(Model.Answer.Details)
+            </div>
+        }
+
+        <div class="audit answered">
+            Answered on <span itemprop="dateCreated" title="@Model.Audit.Created.On.ToString(fullDateTimePattern)">@Model.Audit.Created.On.ToString(longDatePattern)</span> by <span itemprop="creator">Admin</span>
+        </div>
+        @if (Model.Audit.IsVerified) {
+            <div class="audit verified">
+                Verified on <span title="@Model.Audit.Verified.On.ToString(fullDateTimePattern)">@Model.Audit.Verified.On.ToString(longDatePattern)</span> by <span>Admin</span> in version <span>@Model.Audit.Verified.Version.ReleaseNumber</span>
+            </div>
+        } else {
+            <div class="audit unverified">
+                Currently unverified
+            </div>
+        }
     </div>
 </div>
 
 <div class="column">
-    
-    @if (!string.IsNullOrEmpty(Model.Answer.Details)) {
-        <div class="details">
-            <h2>More details</h2>
-            @Html.Raw(Model.Answer.Details)
-        </div>
-    }
-
     <div class="leaderboard-advert">
         <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
         <!-- Minecraft Answers Leaderboard -->
@@ -44,9 +67,9 @@
         <ul>
             @foreach (var question in Model.SimilarQuestions)
             {
-                <li>
-                    <a href="@QuestionUrlParser.Generate(question)">@question.Text</a>
-                </li>
+            <li>
+                <a href="@QuestionUrlParser.Generate(question)">@question.Text</a>
+            </li>
             }
         </ul>
     </div>

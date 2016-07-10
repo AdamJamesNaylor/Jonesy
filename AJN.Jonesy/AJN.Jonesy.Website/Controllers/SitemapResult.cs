@@ -45,7 +45,7 @@ namespace AJN.Jonesy.Website.Controllers {
                 new XElement(_nsSitemap + "loc", host + s),
                 new XElement(_nsSitemap + "lastmod", "2016-07-07T20:34+00:00"),
                 new XElement(_nsSitemap + "changefreq", "yearly"),
-                new XElement(_nsSitemap + "priority", "0.5"));
+                new XElement(_nsSitemap + "priority", "0.2"));
         }
 
         private IEnumerable<XElement> GenerateQuestionNodes(string host) {
@@ -61,7 +61,7 @@ namespace AJN.Jonesy.Website.Controllers {
             if (question.Audit == null || question.Audit.Modified == null)
                 return null;
 
-            return new XElement(_nsSitemap + "lastmod", question.Audit.Modified.On.ToString("yyyy-MM-ddTHH:mm:ss+00:00"));
+            return new XElement(_nsSitemap + "lastmod", question.Audit.Modified.On.ToString("yyyy-MM-ddTHH:mm+00:00"));
         }
 
         private readonly Collection<Question> _questions;

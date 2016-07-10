@@ -52,7 +52,7 @@
             var similarQuestions =
                 questions.Descendants("question").Where(q => q.Attribute("id").Value != question.Id.ToString());
 
-            return new Collection<Question>(similarQuestions.TakeRandom(5).Select(_questionXmlParser.Parse).ToList());
+            return new Collection<Question>(similarQuestions.TakeRandomExclusive(5).Select(_questionXmlParser.Parse).ToList());
         }
 
         private readonly string _appDataPath;

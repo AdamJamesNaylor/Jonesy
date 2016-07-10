@@ -1,7 +1,5 @@
 ﻿
 namespace AJN.Jonesy.Website {
-    using System;
-    using System.Runtime.Remoting.Channels;
     using System.Web.Hosting;
     using System.Web.Mvc;
     using Autofac;

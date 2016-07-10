@@ -23,6 +23,13 @@
         <![CDATA[<p>54 stacks of items works out as a total of 3456 individual items. Assuming all items can be stacked up to 64.</p>]]>
       </details>
     </answer>
+    <audit>
+      <created datetime="2016-07-05T17:30" by="0"></created>
+      <modified datetime="2016-07-05T17:30" by="0"></modified>
+      <verified datetime="2016-07-05T17:30" by="0">
+        <version edition="Computer" releaseNumber="1.10" />
+      </verified>
+    </audit>
   </question>
 
   <question id="1">
@@ -33,6 +40,13 @@
         <![CDATA[<p>Sprinting is 30% faster than walking.</p>]]>
       </details>
     </answer>
+    <audit>
+      <created datetime="2016-07-05T17:30" by="0"></created>
+      <modified datetime="2016-07-05T17:30" by="0"></modified>
+      <verified datetime="2016-07-05T17:30" by="0">
+        <version edition="Computer" releaseNumber="1.10" />
+      </verified>
+    </audit>
   </question>
 
   <question id="2">
@@ -43,6 +57,10 @@
         <![CDATA[<p>A thrown ender pearl has a chance of traveling up to slightly over 54 blocks, with a flight time of around 3 seconds. This gives a travel speed of 54 / 3 = ~18 blocks per second.</p>]]>
       </details>
     </answer>
+    <audit>
+      <created datetime="2016-07-05T17:30" by="0"></created>
+      <modified datetime="2016-07-05T17:30" by="0"></modified>
+    </audit>
   </question>
 
   <question id="3">
@@ -53,6 +71,13 @@
         <![CDATA[<p>TNT blocks won't fall until they are primed.</p>]]>
       </details>
     </answer>
+    <audit>
+      <created datetime="2016-07-05T17:30" by="0"></created>
+      <modified datetime="2016-07-05T17:30" by="0"></modified>
+      <verified datetime="2016-07-05T17:30" by="0">
+        <version edition="Computer" releaseNumber="1.10" />
+      </verified>
+    </audit>
   </question>
 
   <question id="4">
@@ -63,6 +88,13 @@
         <![CDATA[<p>You can also drop stacks by picking one up in the inventory screen and clicking outside the inventory window. Also exiting the inventory screen once a stack has been picked up will drop it.</p>]]>
       </details>
     </answer>
+    <audit>
+      <created datetime="2016-07-05T17:30" by="0"></created>
+      <modified datetime="2016-07-05T17:30" by="0"></modified>
+      <verified datetime="2016-07-05T17:30" by="0">
+        <version edition="Computer" releaseNumber="1.10" />
+      </verified>
+    </audit>
   </question>
 
   <question id="5">
@@ -73,6 +105,13 @@
         <![CDATA[<p>Second only to Tetris and selling 106.86 million copies world wide.</p>]]>
       </details>
     </answer>
+    <audit>
+      <created datetime="2016-07-05T17:30" by="0"></created>
+      <modified datetime="2016-07-05T17:30" by="0"></modified>
+      <verified datetime="2016-07-05T17:30" by="0">
+        <version edition="Computer" releaseNumber="1.10" />
+      </verified>
+    </audit>
   </question>
 
   <question id="6">
@@ -83,6 +122,13 @@
         <![CDATA[<p>Alternatively you can buy download cards from certain stores which you can use to redeem online.</p>]]>
       </details>
     </answer>
+    <audit>
+      <created datetime="2016-07-05T17:30" by="0"></created>
+      <modified datetime="2016-07-05T17:30" by="0"></modified>
+      <verified datetime="2016-07-05T17:30" by="0">
+        <version edition="Computer" releaseNumber="1.10" />
+      </verified>
+    </audit>
   </question>
 
   <question id="7">
@@ -93,6 +139,13 @@
         <![CDATA[<p>Although you have to be 13 to purchase an account with Mojang you do not need to be this age to play.</p>]]>
       </details>
     </answer>
+    <audit>
+      <created datetime="2016-07-05T17:30" by="0"></created>
+      <modified datetime="2016-07-05T17:30" by="0"></modified>
+      <verified datetime="2016-07-05T17:30" by="0">
+        <version edition="Computer" releaseNumber="1.10" />
+      </verified>
+    </audit>
   </question>
 
   <question id="8">
@@ -103,6 +156,13 @@
         <![CDATA[<p>Check Minecraft.net for your local exchange rates.</p>]]>
       </details>
     </answer>
+    <audit>
+      <created datetime="2016-07-05T17:30" by="0"></created>
+      <modified datetime="2016-07-05T17:30" by="0"></modified>
+      <verified datetime="2016-07-05T17:30" by="0">
+        <version edition="Computer" releaseNumber="1.10" />
+      </verified>
+    </audit>
   </question>
 
 </questions>

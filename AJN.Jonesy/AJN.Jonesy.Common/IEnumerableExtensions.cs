@@ -6,11 +6,31 @@ namespace AJN.Jonesy.Common {
 
     public static class IEnumerableExtensions {
         public static IEnumerable<T> TakeRandom<T>(this IEnumerable<T> operand, int count = 1) {
-            var rndGen = new Random((int) DateTime.Now.Ticks); // do this only once in your app/class/IoC container
+            var rndGen = new Random();
             while (count-- > 0) {
                 int random = rndGen.Next(0, operand.Count());
                 yield return operand.ElementAt(random);
             }
+        }
+
+        public static IEnumerable<T> TakeRandomExclusive<T>(this IEnumerable<T> operand, int count = 1) {
+            var rndGen = new Random();
+            var enumerable = operand as T[] ?? operand.ToArray();
+            if (count > enumerable.Length)
+                count = enumerable.Length;
+
+            var result = new int[count];
+            for (int i = 0; i < count; i++) {
+
+                var random = rndGen.Next(0, enumerable.Length);
+
+                while (result.Contains(random)) {
+                    random = rndGen.Next(0, enumerable.Length);
+                }
+                result[i] = random;
+            }
+
+            return result.Select(enumerable.ElementAt);
         }
     }
 }

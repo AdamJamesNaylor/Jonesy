@@ -4,7 +4,7 @@
     using Xunit;
 
     public class IEnumerableExtensions {
-        private readonly List<int> _sut = new List<int> {1, 2, 3};
+        private readonly List<int> _sut = new List<int> {1, 2, 3, 4, 5, 111, 222, 333, 444, 555};
 
         [Fact]
         public void TakeRandom_WithZero_ReturnsEmptyCollection() {
@@ -42,6 +42,19 @@
                     return;
             }
             Assert.True(false, "Consecutive calls to TakeRandom() returned the same element too many times.");
+        }
+
+        [Fact]
+        public void TakeRandomExclusive_Never_ReturnsTheSameElement() {
+            var result = _sut.TakeRandomExclusive(3);
+
+            Assert.NotNull(result);
+
+            Assert.NotEqual(result.First(), result.ElementAt(1));
+            Assert.NotEqual(result.First(), result.ElementAt(2));
+
+            Assert.NotEqual(result.Last(), result.ElementAt(1));
+            Assert.NotEqual(result.Last(), result.First());
         }
     }
 }

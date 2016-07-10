@@ -45,9 +45,9 @@
     <Compile Include="Question.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\AJN.Jonesy.Common\AJN.Jonesy.Common.csproj">
+    <ProjectReference Include="..\AJN.Jonesy.Common\AJN.Common.csproj">
       <Project>{4DB31161-1E5F-488F-8263-9B6E5B75B5B8}</Project>
-      <Name>AJN.Jonesy.Common</Name>
+      <Name>AJN.Common</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -7,8 +7,8 @@
     <ProjectGuid>{4DB31161-1E5F-488F-8263-9B6E5B75B5B8}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>AJN.Jonesy.Common</RootNamespace>
-    <AssemblyName>AJN.Jonesy.Common</AssemblyName>
+    <RootNamespace>AJN.Common</RootNamespace>
+    <AssemblyName>AJN.Common</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

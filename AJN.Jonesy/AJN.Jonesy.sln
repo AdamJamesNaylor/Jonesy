@@ -11,7 +11,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AJN.Jonesy.Business", "AJN.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AJN.Jonesy.Scraper", "AJN.Jonesy.Scraper\AJN.Jonesy.Scraper.csproj", "{72299C19-F659-47FB-A8E4-DFD4650A7554}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AJN.Jonesy.Common", "AJN.Jonesy.Common\AJN.Jonesy.Common.csproj", "{4DB31161-1E5F-488F-8263-9B6E5B75B5B8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AJN.Common", "AJN.Jonesy.Common\AJN.Common.csproj", "{4DB31161-1E5F-488F-8263-9B6E5B75B5B8}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AJN.Jonesy.Common.UnitTests", "AJN.Jonesy.Common.UnitTests\AJN.Jonesy.Common.UnitTests.csproj", "{9C1875ED-BC82-4136-B7E2-91027EB8B480}"
 EndProject
