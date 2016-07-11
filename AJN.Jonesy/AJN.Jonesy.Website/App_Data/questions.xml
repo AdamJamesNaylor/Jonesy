@@ -6,6 +6,15 @@
       <details>
         <![CDATA[<p>27 stacks can be stored in the main inventory, 9 in the hotbar, 1 off-hand slot and 4 armour slots. Giving a potential maximum of 2372 individual items.</p>]]>
       </details>
+    <sources>
+      <source>
+        <url>https://hydra-media.cursecdn.com/minecraft.gamepedia.com/e/eb/2012-01-27_17.16.06.png</url>
+        <comment><![CDATA[<p>Here's proof of how many can be stored.</p>]]></comment>
+        <audit>
+          <created datetime="2016-07-11T13:51" by="0" />
+        </audit>
+      </source>
+    </sources>
     </answer>
     <audit>
       <created datetime="2016-07-05T17:30" by="0"></created>
@@ -15,6 +24,7 @@
       </verified>
     </audit>
   </question>
+  
   <question id="1234">
     <text>How many items can be stored in a double chest?</text>
     <answer>

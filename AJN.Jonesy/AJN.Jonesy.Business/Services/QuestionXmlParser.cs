@@ -1,5 +1,6 @@
 namespace AJN.Jonesy.Business.Services {
     using System;
+    using System.Collections.ObjectModel;
     using System.Xml.Linq;
     using Model;
 
@@ -63,6 +64,18 @@ namespace AJN.Jonesy.Business.Services {
             var details = answer.Element("details");
             if (details != null)
                 result.Details = details.Value;
+
+            var sources = answer.Element("sources");
+            if (sources != null) {
+                var sourcesCollection = new Collection<Source>();
+                foreach (var source in sources.Elements("source")) {
+                    sourcesCollection.Add(new Source {
+                        Url = new Uri(source.Element("url").Value),
+                        Comment = source.Element("comment").Value
+                    });
+                }
+                result.Sources = sourcesCollection;
+            }
 
             return result;
         }

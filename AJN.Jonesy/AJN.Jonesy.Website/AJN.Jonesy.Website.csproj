@@ -67,6 +67,10 @@
     <Reference Include="System.Configuration" />
     <Reference Include="System.Web.Services" />
     <Reference Include="System.EnterpriseServices" />
+    <Reference Include="UAParser, Version=2.1.0.0, Culture=neutral, PublicKeyToken=f7377bf021646069, processorArchitecture=MSIL">
+      <HintPath>..\packages\UAParser.2.1.0.0\lib\net40-Client\UAParser.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System.Web.Razor">
@@ -92,10 +96,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\questions.xml" />
+    <Content Include="App_Data\questions.xml">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Content\Images\minecraft-answered-logo.png" />
     <Content Include="Content\Images\minecraft-answers-logo.png" />
     <Content Include="Content\Styles\main.css" />
+    <Content Include="Content\Styles\mobile.css" />
     <Content Include="Global.asax" />
     <Content Include="Web.config" />
   </ItemGroup>

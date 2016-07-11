@@ -1,13 +1,19 @@
-﻿<!DOCTYPE html>
+﻿@using AJN.Common
+<!DOCTYPE html>
 
 <html itemscope itemtype="http://schema.org/QAPage">
 <head>
     <link rel="shortcut icon" href="">
     <link rel="stylesheet" type="text/css" href="/Content/Styles/main.css">
+    @{
+        UserAgentParser uap = new UserAgentParser(Request);
+        if (uap.IsMobile) {
+            <link rel="stylesheet" type="text/css" href="/Content/Styles/mobile.css">
+        }
+    }
 
-    <meta name="viewport" content="width=device-width"/>
     <meta name="googlebot" content="nosnippet"/>
-    <meta name="viewport" content="width=device-width initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
 
     <title>@ViewBag.Title</title>
 

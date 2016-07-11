@@ -46,6 +46,15 @@
                 Currently unverified
             </div>
         }
+
+        @if (Model.Answer.HasSources) {
+            <div class="details">
+                <h2>Sources</h2>
+                @foreach (var source in Model.Answer.Sources) {
+                    <img src="@source.Url" />@source.Comment
+                }
+            </div>
+        }
     </div>
 </div>
 

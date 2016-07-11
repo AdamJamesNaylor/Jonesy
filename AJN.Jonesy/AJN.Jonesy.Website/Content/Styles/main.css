@@ -38,9 +38,14 @@ footer {
     padding: 40px 0;
 }
 
+ul {
+    padding-left: 20px;
+}
+
 .container {
     min-height: 700px;
 }
+
 .column {
     margin: 0 auto;
     width: 1060px;

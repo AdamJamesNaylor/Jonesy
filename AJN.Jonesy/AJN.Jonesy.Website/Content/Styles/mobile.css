@@ -1,0 +1,35 @@
+﻿body {
+    min-width: initial;
+}
+
+.logo {
+    background-image: url('/Content/Images/minecraft-answered-logo.png');
+    background-size: 250px 85px;
+    width: 250px;
+    height: 85px;
+}
+
+.column {
+    width: initial;
+}
+
+.leaderboard-advert {
+    width: initial;
+}
+
+header {
+    padding: 0;
+    padding-top: 10px;
+}
+
+.welcome * h1 {
+    font-size: 2em;
+}
+
+.question-hyperlink {
+    font-size: inherit;
+}
+
+.answer {
+    font-size: 2em;
+}
