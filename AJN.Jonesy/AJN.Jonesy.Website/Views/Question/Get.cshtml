@@ -27,12 +27,19 @@
 
     <div class="column">
 
-        @if (!string.IsNullOrEmpty(Model.Answer.Details)) {
-            <div class="details">
+        <div class="details">
+            @if (!string.IsNullOrEmpty(Model.Answer.Details)) {
                 <h2>More details</h2>
                 @Html.Raw(Model.Answer.Details)
-            </div>
-        }
+            }
+            
+            @if (Model.Answer.HasSources) {
+                    <h2>Source</h2>
+                    foreach (var source in Model.Answer.Sources) {
+                        Html.RenderPartial("_AnswerSource", source);
+                    }
+            }
+        </div>
 
         <div class="audit answered">
             Answered on <span itemprop="dateCreated" title="@Model.Audit.Created.On.ToString(fullDateTimePattern)">@Model.Audit.Created.On.ToString(longDatePattern)</span> by <span itemprop="creator">Admin</span>
@@ -47,14 +54,6 @@
             </div>
         }
 
-        @if (Model.Answer.HasSources) {
-            <div class="details">
-                <h2>Sources</h2>
-                @foreach (var source in Model.Answer.Sources) {
-                    <img src="@source.Url" />@source.Comment
-                }
-            </div>
-        }
     </div>
 </div>
 
