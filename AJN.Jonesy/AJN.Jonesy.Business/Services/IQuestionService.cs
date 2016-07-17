@@ -6,6 +6,6 @@
         Question Get(int id);
         Collection<Question> GetSimilarQuestions(Question question);
         Collection<Question> GetPopularQuestions();
-        Collection<Question> List();
+        Collection<Question> List(bool excludeNonCanonical = true);
     }
 }

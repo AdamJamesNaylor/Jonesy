@@ -56,14 +56,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IEnumerableExtensions.cs" />
+    <Compile Include="IEnumerableExtensionsTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\AJN.Jonesy.Common\AJN.Common.csproj">
+    <ProjectReference Include="..\AJN.Common\AJN.Common.csproj">
       <Project>{4DB31161-1E5F-488F-8263-9B6E5B75B5B8}</Project>
       <Name>AJN.Common</Name>
     </ProjectReference>

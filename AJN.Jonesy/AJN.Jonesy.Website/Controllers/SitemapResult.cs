@@ -21,14 +21,11 @@ namespace AJN.Jonesy.Website.Controllers {
         public override void ExecuteResult(ControllerContext context) {
             var sitemap = new XDocument(new XDeclaration("1.0", "UTF-8", ""));
 
-            var port = context.HttpContext.Request.Url.Port.ToString();
-            port = port == "80" ? "" : ":" + port;
-
-            var host = context.HttpContext.Request.Url.Scheme + "://" + context.HttpContext.Request.Url.Host + port;
+            var authority = context.HttpContext.Request.Url.GetLeftPart(UriPartial.Authority);
 
             var urlSet = new XElement(_nsSitemap + "urlset", new XAttribute("xmlns", _nsSitemap),
-                GenerateNode(host, "/"),
-                GenerateQuestionNodes(host));
+                GenerateNode(authority, "/"),
+                GenerateQuestionNodes(authority));
 
             sitemap.Add(urlSet);
 

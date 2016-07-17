@@ -142,7 +142,7 @@
   </question>
 
   <question id="7">
-    <text>What age is minecraft rated for?</text>
+    <text>What age is Minecraft rated for?</text>
     <answer>
       <text><![CDATA[<p>PEGI 7.</p>]]></text>
       <details>
@@ -159,7 +159,7 @@
   </question>
 
   <question id="8">
-    <text>How much does minecraft cost?</text>
+    <text>How much does Minecraft cost?</text>
     <answer>
       <text><![CDATA[<p>&#36;26.95 USD.</p>]]></text>
       <details>
@@ -185,7 +185,6 @@
 
   <question id="10" canonicalQuestion="1234">
     <text>How many items can I store in a double chest?</text>
-    <canonicalQuestion>1234</canonicalQuestion>
     <audit>
       <created datetime="2016-07-05T17:30" by="0"></created>
       <modified datetime="2016-07-05T17:30" by="0"></modified>

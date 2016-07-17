@@ -3,7 +3,7 @@
     using System.Linq;
     using Xunit;
 
-    public class IEnumerableExtensions {
+    public class IEnumerableExtensionsTests {
         private readonly List<int> _sut = new List<int> {1, 2, 3, 4, 5, 111, 222, 333, 444, 555};
 
         [Fact]

@@ -99,6 +99,7 @@
     <Content Include="App_Data\questions.xml">
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="Content\Images\icon-foward.svg" />
     <Content Include="Content\Images\minecraft-answered-logo.png" />
     <Content Include="Content\Images\minecraft-answers-logo.png" />
     <Content Include="Content\Styles\main.css" />
@@ -117,6 +118,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\HomeViewModel.cs" />
+    <Compile Include="Models\QuestionRedirectViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SourceHtmlWriter.cs" />
   </ItemGroup>
@@ -130,6 +132,7 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Question\_AnswerSource.cshtml" />
+    <Content Include="Views\Question\Redirect.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

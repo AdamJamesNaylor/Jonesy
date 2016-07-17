@@ -49,9 +49,13 @@
     <Compile Include="Services\QuestionXmlParser.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\AJN.Jonesy.Common\AJN.Common.csproj">
+    <ProjectReference Include="..\AJN.Common\AJN.Common.csproj">
       <Project>{4DB31161-1E5F-488F-8263-9B6E5B75B5B8}</Project>
       <Name>AJN.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AJN.Jonesy.Common\AJN.Jonesy.Common.csproj">
+      <Project>{91d00358-e01f-4193-8c38-bf63c34f16bd}</Project>
+      <Name>AJN.Jonesy.Common</Name>
     </ProjectReference>
     <ProjectReference Include="..\AJN.Jonesy.Model\AJN.Jonesy.Model.csproj">
       <Project>{5C9F8D50-9868-4EFA-A9D7-BB1F511A5A79}</Project>

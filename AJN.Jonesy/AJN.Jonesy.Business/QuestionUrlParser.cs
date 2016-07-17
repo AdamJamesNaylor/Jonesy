@@ -8,12 +8,9 @@ namespace AJN.Jonesy.Business {
     public static class QuestionUrlParser {
         public static string Generate(Question question) {
 
-            if (question == null)
-                return null;
+            var title = GenerateTitle(question);
 
-            var result = question.Text.ToLower();
-            result = Latinise(result);
-            return string.Format("/questions/{0}/{1}", question.Id, RemoveUnsupportedCharacters(result));
+            return string.Format("/questions/{0}/{1}", question.Id, title);
         }
 
         public static string Latinise(string text) {
@@ -49,6 +46,16 @@ namespace AJN.Jonesy.Business {
             }
 
             return result.ToString();
+        }
+
+        public static string GenerateTitle(Question question) {
+            if (question == null)
+                return null;
+
+            var result = question.Text.ToLower();
+            result = Latinise(result);
+
+            return RemoveUnsupportedCharacters(result);
         }
     }
 }

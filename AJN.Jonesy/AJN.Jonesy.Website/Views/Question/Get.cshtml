@@ -1,5 +1,4 @@
-﻿@using System.Globalization
-@using System.Text.RegularExpressions
+﻿@using System.Text.RegularExpressions
 @using AJN.Jonesy.Business
 @model AJN.Jonesy.Model.Question
 
@@ -12,7 +11,7 @@
 }
 
 @section Head {
-    <meta name="twitter:title" property="og:title" itemprop="title name" content="@Model.Text" />
+    <meta name="twitter:title" property="og:title" itemprop="title name" content="@ViewBag.Title" />
     <meta name="twitter:description" property="og:description" itemprop="description" content="@description "/>
     <meta name="description" content="@description">
     <meta property="og:url" content="http://minecraftanswered.imbick.com@(QuestionUrlParser.Generate(Model))" />
@@ -54,15 +53,15 @@
         <div class="audit answered">
             Answered on <span itemprop="dateCreated" title="@Model.Audit.Created.On.ToString(fullDateTimePattern)">@Model.Audit.Created.On.ToString(longDatePattern)</span> by <span itemprop="creator">Admin</span>
         </div>
-        @if (Model.Audit.IsVerified) {
-            <div class="audit verified">
-                Verified on <span title="@Model.Audit.Verified.On.ToString(fullDateTimePattern)">@Model.Audit.Verified.On.ToString(longDatePattern)</span> by <span>Admin</span> in version <span>@Model.Audit.Verified.Version.ReleaseNumber</span>
-            </div>
-        } else {
-            <div class="audit unverified">
-                Currently unverified
-            </div>
-        }
+        @*if (Model.Audit.IsVerified) {
+        <div class="audit verified">
+            Verified on <span title="@Model.Audit.Verified.On.ToString(fullDateTimePattern)">@Model.Audit.Verified.On.ToString(longDatePattern)</span> by <span>Admin</span> in version <span>@Model.Audit.Verified.Version.ReleaseNumber</span>
+        </div>
+    } else {
+        <div class="audit unverified">
+            Currently unverified
+        </div>
+    }*@
 
     </div>
 </div>
@@ -83,12 +82,15 @@
     <div class="links">
         <h2>Similar questions</h2>
         <ul>
-            @foreach (var question in Model.SimilarQuestions)
-            {
-            <li>
-                <a href="@QuestionUrlParser.Generate(question)">@question.Text</a>
-            </li>
+            @foreach (var question in Model.SimilarQuestions) {
+                <li>
+                    <a href="@QuestionUrlParser.Generate(question)">@question.Text</a>
+                </li>
             }
         </ul>
+
+        @if (Model.EquivalentQuestions.Any()) {
+            <a href="/redirects/@Model.Id/@QuestionUrlParser.GenerateTitle(Model)">Which questions redirect here?</a>
+        }
     </div>
 </div>

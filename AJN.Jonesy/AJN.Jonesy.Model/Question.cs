@@ -19,11 +19,12 @@ namespace AJN.Jonesy.Model {
         public int CanonicalQuestionId { get; set; }
 
         public bool IsCanonical {
-            get { return CanonicalQuestionId != 0; }
+            get { return CanonicalQuestionId == 0; }
         }
 
         public Question() {
             SimilarQuestions = new Collection<Question>();
+            EquivalentQuestions = new Collection<Question>();
         }
     }
 

@@ -13,6 +13,10 @@ a {
     color: #242729;
 }
 
+a:hover {
+    text-decoration: underline;
+}
+
 h1 {
     margin: 0;
 }
@@ -46,12 +50,15 @@ footer {
     padding: 40px 0;
 }
 
+footer a {
+    color: #c0cad4;
+}
+
 ul {
     padding-left: 20px;
 }
 
 .container {
-    min-height: 700px;
 }
 
 .column {
@@ -74,6 +81,10 @@ ul {
     background: #69a9a9;
     padding: 40px 0;
     margin: 30px 0;
+    color: #fff;
+}
+
+.strip a {
     color: #fff;
 }
 
@@ -114,7 +125,7 @@ ul {
     border-bottom: 1px #ccc solid;
 }
 
-.links a {
+.links ul a {
     font-size: 1.5em;
     line-height: 1.5em;
 }
@@ -132,3 +143,20 @@ ul {
 .welcome * h1 {
     font-size: 3em;
 }
+
+.redirects {
+    font-size: 1.5em;
+}
+
+.redirects ul {
+   list-style: none;
+   margin-left: 0;
+   padding-left: 1em;
+   text-indent: -1em;
+}
+
+.redirects img {
+    width: 1em;
+    height: 1em;
+}
+

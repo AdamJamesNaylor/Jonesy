@@ -28,7 +28,7 @@
 
             var result = _questionXmlParser.Parse(question);
             result.SimilarQuestions = GetSimilarQuestions(result);
-            //result.EquivalentQuestions = GetEquivalentQuestions(result);
+            result.EquivalentQuestions = GetEquivalentQuestions(result);
             return result;
         }
 
@@ -37,11 +37,14 @@
             return allQuestions.Take(5).ToCollection();
         }
 
-        public Collection<Question> List() {
+        public Collection<Question> List(bool excludeNonCanonical = true) {
             string file = Path.Combine(_appDataPath, "questions.xml");
             var questions = XElement.Load(file);
 
             var popularQuestions = questions.Descendants("question");
+
+            if (excludeNonCanonical)
+                popularQuestions = popularQuestions.Where(q => q.IsCanonical());
 
             return popularQuestions.Select(_questionXmlParser.Parse).ToCollection();
         }
@@ -51,7 +54,7 @@
             var questions = XElement.Load(file);
 
             var similarQuestions =
-                questions.Descendants("question").Where(q => q.Attribute("id").Value != question.Id.ToString());
+                questions.Descendants("question").Where(q => q.Attribute("id").Value != question.Id.ToString() && q.IsCanonical());
 
             return similarQuestions.TakeRandomExclusive(5).Select(_questionXmlParser.Parse).ToCollection();
         }
@@ -62,7 +65,11 @@
 
             var xmlQuestion = questions.Descendants("question").First(q => q.Attribute("id").Value == question.Id.ToString());
 
-            var equivalentQuestionIds = xmlQuestion.Attribute("equivalentQuestions").Value.Split(',');
+            var equivalentQuestionAttribute = xmlQuestion.Attribute("equivalentQuestions");
+            if (equivalentQuestionAttribute == null)
+                return new Collection<Question>();
+
+            var equivalentQuestionIds = equivalentQuestionAttribute.Value.Split(',');
             var result = questions.Descendants("question").Where(q => equivalentQuestionIds.Contains(q.Attribute("id").Value));
 
             return result.Select(_questionXmlParser.Parse).ToCollection();
