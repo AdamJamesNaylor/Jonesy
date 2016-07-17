@@ -1,0 +1,4 @@
+﻿Sitemap: http://minecraftanswered.imbick.com//sitemap.xml
+
+User-agent: *
+Allow: /

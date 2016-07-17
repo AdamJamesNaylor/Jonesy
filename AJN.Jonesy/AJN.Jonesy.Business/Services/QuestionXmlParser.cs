@@ -1,6 +1,5 @@
 namespace AJN.Jonesy.Business.Services {
     using System;
-    using System.Collections.ObjectModel;
     using System.Xml.Linq;
     using Model;
 
@@ -11,11 +10,14 @@ namespace AJN.Jonesy.Business.Services {
             var text = question.Element("text").Value;
             var answer = ParseAnswer(question.Element("answer"));
             var audit = ParseAudit(question.Element("audit"));
+            var canonicalQuestionId = question.Attribute("canonicalQuestion");
+
             return new Question {
                 Id = int.Parse(id),
                 Text = text,
                 Answer = answer,
-                Audit = audit
+                Audit = audit,
+                CanonicalQuestionId = canonicalQuestionId != null ? int.Parse(canonicalQuestionId.Value) : 0
             };
         }
 
@@ -56,6 +58,9 @@ namespace AJN.Jonesy.Business.Services {
         }
 
         private Answer ParseAnswer(XElement answer) {
+            if (answer == null)
+                return null;
+
             var text = answer.Element("text").Value;
             var result = new Answer {
                 Text = text
@@ -67,14 +72,12 @@ namespace AJN.Jonesy.Business.Services {
 
             var sources = answer.Element("sources");
             if (sources != null) {
-                var sourcesCollection = new Collection<Source>();
                 foreach (var source in sources.Elements("source")) {
-                    sourcesCollection.Add(new Source {
+                    result.Sources.Add(new Source {
                         Url = new Uri(source.Element("url").Value),
                         Comment = source.Element("comment").Value
                     });
                 }
-                result.Sources = sourcesCollection;
             }
 
             return result;

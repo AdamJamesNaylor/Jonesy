@@ -2,6 +2,7 @@
 namespace AJN.Jonesy.Common {
     using System;
     using System.Collections.Generic;
+    using System.Collections.ObjectModel;
     using System.Linq;
 
     public static class IEnumerableExtensions {
@@ -31,6 +32,10 @@ namespace AJN.Jonesy.Common {
             }
 
             return result.Select(enumerable.ElementAt);
+        }
+
+        public static Collection<T> ToCollection<T>(this IEnumerable<T> operand) {
+            return new Collection<T>(operand.ToList());
         }
     }
 }

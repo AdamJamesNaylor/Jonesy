@@ -18,12 +18,20 @@ h1 {
 }
 
 header {
-    padding: 40px 0;
+    padding: 40px 0 15px;
     border-bottom: 1px #ccc solid;
 }
 
 header.column {
     margin-bottom: 30px;
+}
+
+header h2 {
+    display: inline;
+    margin-left: 30px;
+    font-size: 1.5em;
+    color: #aaa;
+    font-weight: normal;
 }
 
 h2 {
@@ -55,10 +63,11 @@ ul {
 .logo {
     background-image: url('/Content/Images/minecraft-answered-logo.png');
 
-    display: block;
+    display: inline-block;
     width: 358px;
     height: 67px;
     text-indent: -999999em;
+    vertical-align: text-bottom;
 }
 
 .strip {

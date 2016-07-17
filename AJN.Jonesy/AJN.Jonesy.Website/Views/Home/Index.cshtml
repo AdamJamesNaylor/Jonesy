@@ -1,8 +1,15 @@
 ﻿@using AJN.Jonesy.Business
 @model AJN.Jonesy.Website.Models.HomeViewModel
 @{
-    ViewBag.Title = "Minecraft Answered - Simple anwers for every question.";
+    ViewBag.Title = "Simple anwers for every question - Minecraft Answered";
     Layout = "~/Views/Shared/_QuestionLayout.cshtml";
+}
+
+@section Head {
+    <meta name="twitter:title" property="og:title" itemprop="title name" content="Minecraft Answered" />
+    <meta name="twitter:description" property="og:description" itemprop="description" content="Simple answers to every Minecraft question." />
+    <meta name="description" content="Simple answers to every Minecraft question.">
+    <meta property="og:url" content="http://minecraftanswered.imbick.com" />
 }
 
 <div class="strip welcome">

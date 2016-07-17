@@ -104,6 +104,7 @@
     <Content Include="Content\Styles\main.css" />
     <Content Include="Content\Styles\mobile.css" />
     <Content Include="Global.asax" />
+    <Content Include="robots.txt" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>

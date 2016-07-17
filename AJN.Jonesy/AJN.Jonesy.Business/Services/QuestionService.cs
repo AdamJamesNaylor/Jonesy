@@ -28,12 +28,13 @@
 
             var result = _questionXmlParser.Parse(question);
             result.SimilarQuestions = GetSimilarQuestions(result);
+            //result.EquivalentQuestions = GetEquivalentQuestions(result);
             return result;
         }
 
         public Collection<Question> GetPopularQuestions() {
             var allQuestions = List();
-            return new Collection<Question>(allQuestions.Take(5).ToList());
+            return allQuestions.Take(5).ToCollection();
         }
 
         public Collection<Question> List() {
@@ -42,7 +43,7 @@
 
             var popularQuestions = questions.Descendants("question");
 
-            return new Collection<Question>(popularQuestions.Select(_questionXmlParser.Parse).ToList());
+            return popularQuestions.Select(_questionXmlParser.Parse).ToCollection();
         }
 
         public Collection<Question> GetSimilarQuestions(Question question) {
@@ -52,7 +53,19 @@
             var similarQuestions =
                 questions.Descendants("question").Where(q => q.Attribute("id").Value != question.Id.ToString());
 
-            return new Collection<Question>(similarQuestions.TakeRandomExclusive(5).Select(_questionXmlParser.Parse).ToList());
+            return similarQuestions.TakeRandomExclusive(5).Select(_questionXmlParser.Parse).ToCollection();
+        }
+
+        public Collection<Question> GetEquivalentQuestions(Question question) {
+            string file = Path.Combine(_appDataPath, "questions.xml");
+            var questions = XElement.Load(file);
+
+            var xmlQuestion = questions.Descendants("question").First(q => q.Attribute("id").Value == question.Id.ToString());
+
+            var equivalentQuestionIds = xmlQuestion.Attribute("equivalentQuestions").Value.Split(',');
+            var result = questions.Descendants("question").Where(q => equivalentQuestionIds.Contains(q.Attribute("id").Value));
+
+            return result.Select(_questionXmlParser.Parse).ToCollection();
         }
 
         private readonly string _appDataPath;

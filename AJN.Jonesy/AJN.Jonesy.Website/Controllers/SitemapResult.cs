@@ -44,7 +44,7 @@ namespace AJN.Jonesy.Website.Controllers {
             return new XElement(_nsSitemap + "url",
                 new XElement(_nsSitemap + "loc", host + s),
                 new XElement(_nsSitemap + "lastmod", "2016-07-07T20:34+00:00"),
-                new XElement(_nsSitemap + "changefreq", "yearly"),
+                new XElement(_nsSitemap + "changefreq", "monthly"),
                 new XElement(_nsSitemap + "priority", "0.2"));
         }
 

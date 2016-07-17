@@ -14,6 +14,14 @@ namespace AJN.Jonesy.Model {
 
         public Collection<Question> SimilarQuestions { get; set; }
 
+        public Collection<Question> EquivalentQuestions { get; set; }
+
+        public int CanonicalQuestionId { get; set; }
+
+        public bool IsCanonical {
+            get { return CanonicalQuestionId != 0; }
+        }
+
         public Question() {
             SimilarQuestions = new Collection<Question>();
         }

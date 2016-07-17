@@ -6,7 +6,7 @@
       <details>
         <![CDATA[<p>27 stacks can be stored in the main inventory, 9 in the hotbar, 1 off-hand slot and 4 armour slots. Giving a potential maximum of 2372 individual items.</p>]]>
       </details>
-    <sources>
+    <!--<sources>
       <source>
         <url>https://www.youtube.com/watch?v=DAcjV60RnRw</url>
         <comment><![CDATA[<p>Here's proof of how many can be stored.</p>]]></comment>
@@ -14,7 +14,7 @@
           <created datetime="2016-07-11T13:51" by="0" />
         </audit>
       </source>
-    </sources>
+    </sources>-->
     </answer>
     <audit>
       <created datetime="2016-07-05T17:30" by="0"></created>
@@ -25,7 +25,7 @@
     </audit>
   </question>
   
-  <question id="1234">
+  <question id="1234" equivalentQuestions="9,10">
     <text>How many items can be stored in a double chest?</text>
     <answer>
       <text><![CDATA[<p>54 stacks.</p>]]></text>
@@ -172,6 +172,23 @@
       <verified datetime="2016-07-05T17:30" by="0">
         <version edition="Computer" releaseNumber="1.10" />
       </verified>
+    </audit>
+  </question>
+
+  <question id="9" canonicalQuestion="1234">
+    <text>How many items can you store in a double chest?</text>
+    <audit>
+      <created datetime="2016-07-05T17:30" by="0"></created>
+      <modified datetime="2016-07-05T17:30" by="0"></modified>
+    </audit>
+  </question>
+
+  <question id="10" canonicalQuestion="1234">
+    <text>How many items can I store in a double chest?</text>
+    <canonicalQuestion>1234</canonicalQuestion>
+    <audit>
+      <created datetime="2016-07-05T17:30" by="0"></created>
+      <modified datetime="2016-07-05T17:30" by="0"></modified>
     </audit>
   </question>
 

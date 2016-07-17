@@ -1,26 +1,36 @@
 ﻿@using System.Globalization
+@using System.Text.RegularExpressions
 @using AJN.Jonesy.Business
 @model AJN.Jonesy.Model.Question
 
 @{
-    ViewBag.Title = Model.Text;
+    ViewBag.Title = Model.Text + " - Minecraft Answered";
     Layout = "~/Views/Shared/_QuestionLayout.cshtml";
-    var longDatePattern = CultureInfo.CurrentCulture.DateTimeFormat.LongDatePattern;
-    var fullDateTimePattern = CultureInfo.CurrentCulture.DateTimeFormat.FullDateTimePattern;
+    var longDatePattern = "yyyy/MM/dd";
+    var fullDateTimePattern = "dd MMMM yyyy";
+    var description = WebUtility.HtmlDecode(Regex.Replace(Model.Text + " " + Model.Answer.Text + " " + Model.Answer.Details, "<[^>]*(>|$)", string.Empty));
+}
+
+@section Head {
+    <meta name="twitter:title" property="og:title" itemprop="title name" content="@Model.Text" />
+    <meta name="twitter:description" property="og:description" itemprop="description" content="@description "/>
+    <meta name="description" content="@description">
+    <meta property="og:url" content="http://minecraftanswered.imbick.com@(QuestionUrlParser.Generate(Model))" />
 }
 
 <div class="column" itemscope itemtype="http://schema.org/Question">
-    <h1 itemprop="name"> <!--itemprop="text"?-->
+    <h1 itemprop="name">
         <a href="@QuestionUrlParser.Generate(Model)" class="question-hyperlink">@Model.Text</a>
     </h1>
     <div class="audit">
         Asked on <span itemprop="dateCreated" title="@Model.Audit.Created.On.ToString(fullDateTimePattern)">@Model.Audit.Created.On.ToString(longDatePattern)</span> by <span itemprop="creator">Admin</span>
     </div>
+    <span style="display:none;" itemprop="answerCount">1</span>
 </div>
 
 <div itemscope itemtype="http://schema.org/Answer">
     <div class="strip">
-        <div class="column answer">
+        <div class="column answer" itemprop="text">
             @Html.Raw(Model.Answer.Text)
         </div>
     </div>
