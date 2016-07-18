@@ -191,4 +191,58 @@
     </audit>
   </question>
 
+  <question id="11">
+    <text>Which blocks can Endermen pick up?</text>
+    <answer>
+      <text><![CDATA[<p>Endermen can only pick up the following blocks; Allium, Azure Bluet, Blue Orchid, Dandelion, Orange Tulip, Red Tulip, Pink Tulip, White Tulip, Oxeye Daisy, Poppy, Cactus, Clay, Coarse Dirt, Dirt, Grass Block, Gravel, Melon (block), Pumpkin, Mycelium, Podzol, Red Mushroom, Brown Mushroom, Red Sand, Sand, TNT and Netherrack.</p>]]></text>
+      <details>
+        <![CDATA[<p>Endermen will drop the block they are carrying when they are killed.</p>]]>
+      </details>
+
+    </answer>
+    <audit>
+      <created datetime="2016-07-18T22:50" by="0" />
+      <modified datetime="2016-07-18T22:50" by="0" />
+      <verified datetime="2016-07-18T22:50" by="0">
+        <version edition="Computer" releaseNumber="1.10" />
+      </verified>
+    </audit>
+  </question>
+
+  <question id="12">
+    <text>At what light level can mushrooms grow?</text>
+    <answer>
+      <text><![CDATA[<p>A light level of 12 or lower.</p>]]></text>
+      <details>
+        <![CDATA[<p>Mushrooms will not grow directly underneath sky.</p>]]>
+      </details>
+
+    </answer>
+    <audit>
+      <created datetime="2016-07-18T22:55" by="0" />
+      <modified datetime="2016-07-18T22:55" by="0" />
+      <verified datetime="2016-07-18T22:55" by="0">
+        <version edition="Computer" releaseNumber="1.10" />
+      </verified>
+    </audit>
+  </question>
+
+  <question id="13">
+    <text>How can you get the seed of a world?</text>
+    <answer>
+      <text><![CDATA[<p>Use the /seed command.</p>]]></text>
+      <details>
+        <![CDATA[<p>You can also view the seed of a world if you are able to select it in the Select world screen and then press Re-create and then More world options.</p>]]>
+      </details>
+
+    </answer>
+    <audit>
+      <created datetime="2016-07-18T23:36" by="0" />
+      <modified datetime="2016-07-18T23:36" by="0" />
+      <verified datetime="2016-07-18T23:36" by="0">
+        <version edition="Computer" releaseNumber="1.10" />
+      </verified>
+    </audit>
+  </question>
+
 </questions>

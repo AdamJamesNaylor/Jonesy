@@ -22,7 +22,7 @@
         <a href="@QuestionUrlParser.Generate(Model)" class="question-hyperlink">@Model.Text</a>
     </h1>
     <div class="audit">
-        Asked on <span itemprop="dateCreated" title="@Model.Audit.Created.On.ToString(fullDateTimePattern)">@Model.Audit.Created.On.ToString(longDatePattern)</span> by <span itemprop="creator">Admin</span>
+        Asked on <span itemprop="dateCreated" title="@Model.Audit.Created.On.ToString(fullDateTimePattern)">@Model.Audit.Created.On.ToString(longDatePattern)</span><!-- by <span itemprop="creator">Admin</span>-->
     </div>
     <span style="display:none;" itemprop="answerCount">1</span>
 </div>
@@ -51,7 +51,7 @@
         </div>
 
         <div class="audit answered">
-            Answered on <span itemprop="dateCreated" title="@Model.Audit.Created.On.ToString(fullDateTimePattern)">@Model.Audit.Created.On.ToString(longDatePattern)</span> by <span itemprop="creator">Admin</span>
+            Answered on <span itemprop="dateCreated" title="@Model.Audit.Created.On.ToString(fullDateTimePattern)">@Model.Audit.Created.On.ToString(longDatePattern)</span><!-- by <span itemprop="creator">Admin</span>-->
         </div>
         @*if (Model.Audit.IsVerified) {
         <div class="audit verified">
