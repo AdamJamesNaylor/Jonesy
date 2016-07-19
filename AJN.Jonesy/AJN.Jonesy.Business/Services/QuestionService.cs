@@ -34,7 +34,7 @@
 
         public Collection<Question> GetPopularQuestions() {
             var allQuestions = List();
-            return allQuestions.Take(5).ToCollection();
+            return allQuestions.TakeRandomExclusive(5).ToCollection();
         }
 
         public Collection<Question> List(bool excludeNonCanonical = true) {

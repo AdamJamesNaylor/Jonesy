@@ -1,14 +1,16 @@
 ﻿@using System.Text.RegularExpressions
 @using AJN.Jonesy.Business
+@using AJN.Jonesy.Common
 @model AJN.Jonesy.Model.Question
 
 @{
-    ViewBag.Title = Model.Text + " - Minecraft Answered";
     Layout = "~/Views/Shared/_QuestionLayout.cshtml";
     var longDatePattern = "yyyy/MM/dd";
     var fullDateTimePattern = "dd MMMM yyyy";
     var description = WebUtility.HtmlDecode(Regex.Replace(Model.Text + " " + Model.Answer.Text + " " + Model.Answer.Details, "<[^>]*(>|$)", string.Empty));
 }
+
+@section Title {@Model.Text - Minecraft Answered}
 
 @section Head {
     <meta name="twitter:title" property="og:title" itemprop="title name" content="@ViewBag.Title" />
@@ -30,7 +32,7 @@
 <div itemscope itemtype="http://schema.org/Answer">
     <div class="strip">
         <div class="column answer" itemprop="text">
-            @Html.Raw(Model.Answer.Text)
+            @Html.Render(Model.Answer.Text)
         </div>
     </div>
 
@@ -39,7 +41,7 @@
         <div class="details">
             @if (!string.IsNullOrEmpty(Model.Answer.Details)) {
                 <h2>More details</h2>
-                @Html.Raw(Model.Answer.Details)
+                @Html.Render(Model.Answer.Details)
             }
             
             @if (Model.Answer.HasSources) {

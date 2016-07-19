@@ -230,9 +230,9 @@
   <question id="13">
     <text>How can you get the seed of a world?</text>
     <answer>
-      <text><![CDATA[<p>Use the /seed command.</p>]]></text>
+      <text><![CDATA[<p>Use the <code>/seed</code> command.</p>]]></text>
       <details>
-        <![CDATA[<p>You can also view the seed of a world if you are able to select it in the Select world screen and then press Re-create and then More world options.</p>]]>
+        <![CDATA[<p>You can also view the seed of a world if you are able to select it in the Select world screen and then press <button>Re-create</button> and then <button>More world options</button>.</p>]]>
       </details>
 
     </answer>
@@ -250,7 +250,7 @@
     <answer>
       <text><![CDATA[<p>An experimental pre-release of the game prior to an official update.</p>]]></text>
       <details>
-        <![CDATA[<p>Snapshots are a way fo the developers of the game to get early feedback and testing of features prior to them being added to the game.</p>]]>
+        <![CDATA[<p>Snapshots are a way for the developers of the game to get early feedback and testing of features prior to them being added to the game.</p>]]>
       </details>
 
     </answer>
@@ -304,7 +304,7 @@
     <answer>
       <text><![CDATA[<p>Establish a small base camp.</p>]]></text>
       <details>
-        <![CDATA[<p>If it's your first game, protecting yourself from the dangers of nighttime is a top priority. This involves building a basic shelter, some tools and ideally a bed and some lighting to get through the first night.</p>]]>
+        <![CDATA[<p>If it's your first game, protecting yourself from the dangers of night time is a top priority. After gathering wood, this involves building a basic shelter, some tools and ideally a bed and some lighting to get through the first night.</p>]]>
       </details>
 
     </answer>
@@ -331,15 +331,16 @@
       <details>
         <![CDATA[
         <p>Regeneration can be acquired from beacons, potions and golden apples. The unenchanted golden apple provides regeneration at level II which regenerates a maximum of 4 hearts over 5 seconds. The enchanted variety however restores 16 hearts over 20 seconds.</p>
-        <p></p>
+        <p>Unenchanted golden apples provide absorption at level I which gives 4 yellow hearts of absorption for 2 minutes. And enchanted golden apples provide level IV which delivers 16 hearts.</p>
+        <p>The ammount of health delivered by an instant health potion is relative to the source and effect level.</p>
         ]]>
       </details>
 
     </answer>
     <audit>
-      <created datetime="2016-07-19T08:20" by="0" />
-      <modified datetime="2016-07-19T08:20" by="0" />
-      <verified datetime="2016-07-19T08:20" by="0">
+      <created datetime="2016-07-19T13:00" by="0" />
+      <modified datetime="2016-07-19T13:00" by="0" />
+      <verified datetime="2016-07-19T13:00" by="0">
         <version edition="Computer" releaseNumber="1.10" />
       </verified>
     </audit>
