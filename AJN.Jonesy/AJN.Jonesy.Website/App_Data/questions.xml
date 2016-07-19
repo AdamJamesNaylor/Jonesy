@@ -244,5 +244,106 @@
       </verified>
     </audit>
   </question>
+  
+  <question id="14">
+    <text>What is a snapshot?</text>
+    <answer>
+      <text><![CDATA[<p>An experimental pre-release of the game prior to an official update.</p>]]></text>
+      <details>
+        <![CDATA[<p>Snapshots are a way fo the developers of the game to get early feedback and testing of features prior to them being added to the game.</p>]]>
+      </details>
+
+    </answer>
+    <audit>
+      <created datetime="2016-07-19T08:00" by="0" />
+      <modified datetime="2016-07-19T08:00" by="0" />
+      <verified datetime="2016-07-19T08:00" by="0">
+        <version edition="Computer" releaseNumber="1.10" />
+      </verified>
+    </audit>
+  </question>
+
+  <question id="15">
+    <text>How do you complete Minecraft?</text>
+    <answer>
+      <text><![CDATA[<p>Defeat the Ender Dragon.</p>]]></text>
+      <details>
+        <![CDATA[<p>Although killing the Ender Dragon is the end of the game the player is free to continue playing and even respawning the Ender Dragon for continual fights.</p>]]>
+      </details>
+
+    </answer>
+    <audit>
+      <created datetime="2016-07-19T08:10" by="0" />
+      <modified datetime="2016-07-19T08:10" by="0" />
+      <verified datetime="2016-07-19T08:10" by="0">
+        <version edition="Computer" releaseNumber="1.10" />
+      </verified>
+    </audit>
+  </question>
+
+  <question id="16">
+    <text>What should be done first in survival mode?</text>
+    <answer>
+      <text><![CDATA[<p>Gather wood.</p>]]></text>
+      <details>
+        <![CDATA[<p>Wood is the basis for all things required in the early stages of the game, so it is recommended to harvest some trees and craft the wood blocks into wooden planks.</p>]]>
+      </details>
+
+    </answer>
+    <audit>
+      <created datetime="2016-07-19T08:15" by="0" />
+      <modified datetime="2016-07-19T08:15" by="0" />
+      <verified datetime="2016-07-19T08:15" by="0">
+        <version edition="Computer" releaseNumber="1.10" />
+      </verified>
+    </audit>
+  </question>
+
+  <question id="17">
+    <text>What should be done second in survival mode?</text>
+    <answer>
+      <text><![CDATA[<p>Establish a small base camp.</p>]]></text>
+      <details>
+        <![CDATA[<p>If it's your first game, protecting yourself from the dangers of nighttime is a top priority. This involves building a basic shelter, some tools and ideally a bed and some lighting to get through the first night.</p>]]>
+      </details>
+
+    </answer>
+    <audit>
+      <created datetime="2016-07-19T08:20" by="0" />
+      <modified datetime="2016-07-19T08:20" by="0" />
+      <verified datetime="2016-07-19T08:20" by="0">
+        <version edition="Computer" releaseNumber="1.10" />
+      </verified>
+    </audit>
+  </question>
+
+  <question id="18">
+    <text>How can health be restored?</text>
+    <answer>
+      <text>
+        <![CDATA[<p>The many ways to restore health are:
+                  <ul>
+                    <li>Health naturally regenerates slowly over time whenever the hunger bar is at 18 or above.</li>
+                    <li>The regeneration effect.</li>
+                    <li>The absorption effect.</li>
+                    <li>The instant health potion.</li>
+                  </p>]]></text>
+      <details>
+        <![CDATA[
+        <p>Regeneration can be acquired from beacons, potions and golden apples. The unenchanted golden apple provides regeneration at level II which regenerates a maximum of 4 hearts over 5 seconds. The enchanted variety however restores 16 hearts over 20 seconds.</p>
+        <p></p>
+        ]]>
+      </details>
+
+    </answer>
+    <audit>
+      <created datetime="2016-07-19T08:20" by="0" />
+      <modified datetime="2016-07-19T08:20" by="0" />
+      <verified datetime="2016-07-19T08:20" by="0">
+        <version edition="Computer" releaseNumber="1.10" />
+      </verified>
+    </audit>
+  </question>
+
 
 </questions>
