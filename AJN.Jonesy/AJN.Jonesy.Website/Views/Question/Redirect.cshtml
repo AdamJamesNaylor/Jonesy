@@ -3,12 +3,13 @@
 @model AJN.Jonesy.Model.Question
 
 @{
-    ViewBag.Title = "Equivalent questions to " + Model.Text + " - Minecraft Answered";
+    var title = "Equivalent questions to " + Model.Text + " - Minecraft Answered";
     Layout = "~/Views/Shared/_QuestionLayout.cshtml";
     var description = string.Format("List of equivalent questions for the question - {0}", WebUtility.HtmlDecode(Regex.Replace(Model.Text, "<[^>]*(>|$)", string.Empty)));
     
 }
 
+@section Title { @title }
 
 @section Head {
     <meta name="twitter:title" property="og:title" itemprop="title name" content="@ViewBag.Title" />

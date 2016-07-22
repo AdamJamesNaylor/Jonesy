@@ -22,6 +22,8 @@ namespace AJN.Jonesy.Model {
             get { return CanonicalQuestionId == 0; }
         }
 
+        public Collection<Tag> Tags { get; set; }
+
         public Question() {
             SimilarQuestions = new Collection<Question>();
             EquivalentQuestions = new Collection<Question>();

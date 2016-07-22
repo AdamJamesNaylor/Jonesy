@@ -45,8 +45,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="HtmlHelperExtensions.cs" />
+    <Compile Include="QuestionExtensions.cs" />
     <Compile Include="XElementExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AJN.Jonesy.Model\AJN.Jonesy.Model.csproj">
+      <Project>{5C9F8D50-9868-4EFA-A9D7-BB1F511A5A79}</Project>
+      <Name>AJN.Jonesy.Model</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

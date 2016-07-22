@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<tags>
+  <tag id="1" name="Mushrooms">
+    <description>
+      Mushrooms are naturally occuring fungi that can be found growing in dark areas.
+    </description>
+    <icon src="/content/images/invsprite.png" class="mushrooms" />
+  </tag>
+  <tag id="2" name="Chests">
+    <description>
+      Chests are a type of block that allow the player to store items.
+    </description>
+    <icon src="/content/images/invsprite.png" class="chests" />
+  </tag>
+
+  <tag id="3" name="Gameplay">
+    <description>
+      Gameplay questions relate to the way in which the game works rather than any specific content within it.
+    </description>
+    <icon src="/content/images/miscsprite.png" class="gameplay" />
+  </tag>
+
+  <tag id="4" name="Blocks">
+    <description>
+      Blocks are the main unit of construction within Minecraft.
+    </description>
+    <icon src="/content/images/invsprite.png" class="blocks" />
+  </tag>
+
+  <tag id="5" name="Health">
+    <description>
+      Health in Minecraft is represented by a row of hearts.
+    </description>
+    <icon src="/content/images/icons.png" class="health" />
+  </tag>
+
+</tags>

@@ -99,11 +99,17 @@
     <Content Include="App_Data\questions.xml">
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="App_Data\tags.xml" />
+    <Content Include="Content\Fonts\mcfont.svg" />
+    <Content Include="Content\Images\button_active_center.png" />
+    <Content Include="Content\Images\button_center.png" />
     <Content Include="Content\Images\icon-foward.svg" />
     <Content Include="Content\Images\minecraft-answered-logo.png" />
     <Content Include="Content\Images\minecraft-answers-logo.png" />
     <Content Include="Content\Styles\main.css" />
     <Content Include="Content\Styles\mobile.css" />
+    <Content Include="Content\Styles\tags.css" />
+    <Content Include="Credits.txt" />
     <Content Include="Global.asax" />
     <Content Include="robots.txt" />
     <Content Include="Web.config" />
@@ -130,11 +136,15 @@
     <Content Include="Views\Question\Get.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Shared\_QuestionLayout.cshtml" />
+    <Content Include="Content\Fonts\mcfont.eot" />
+    <Content Include="Content\Fonts\mcfont.ttf" />
+    <Content Include="Content\Fonts\mcfont.woff" />
     <None Include="Properties\PublishProfiles\FTP.pubxml" />
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Question\_AnswerSource.cshtml" />
     <Content Include="Views\Question\Redirect.cshtml" />
+    <Content Include="Views\Question\Add.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

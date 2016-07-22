@@ -17,7 +17,7 @@ a:hover {
 }
 
 h1 {
-    margin: 0;
+    margin: 0 0 14px 0;
 }
 
 header {
@@ -31,7 +31,7 @@ header.column {
 
 header h2 {
     display: inline;
-    margin-left: 30px;
+    /*margin-left: 30px;*/
     font-size: 1.5em;
     color: #aaa;
     font-weight: normal;
@@ -85,6 +85,12 @@ ul {
 
 .strip a {
     color: #fff;
+    text-decoration: underline;
+}
+
+.strip a:hover {
+    color: #fff;
+    text-decoration: none;
 }
 
 .question-hyperlink {
@@ -105,6 +111,32 @@ ul {
     color: #ff9d9d;
 }
 
+.tags {
+    margin-right: 30px;
+}
+
+.tag {
+    background-color: antiquewhite;
+    border: solid 1px bisque;
+    border-radius: 2px;
+    padding: 4px;
+    color: burlywood;
+}
+
+span.tag {
+    display: inline-block;
+    padding: 0 4px 0 0;
+}
+
+span.tag > span {
+    background-image: url(/content/images/InvSprite.png);
+    width: 32px;
+    height: 32px;
+    vertical-align: middle;
+    display: inline-block;
+    margin: 1px;
+}
+
 .answer {
     font-size: 3.5em;
     line-height: normal;
@@ -122,6 +154,7 @@ ul {
 .details {
     padding-bottom: 30px;
     border-bottom: 1px #ccc solid;
+    margin-bottom: 10px;
 }
 
 .links ul a {
@@ -213,6 +246,22 @@ ul {
     padding: 0 5px;
     font-family: monospace;
     font-size: 0.9em;
+}
+
+.beta {
+    background-color: #de6e6e;
+    display: inline-block;
+    vertical-align: top;
+    padding: 2px 4px 0 5px;
+    font-family: "nta", Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.25;
+    font-weight: 700;
+    text-transform: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-decoration: none;
+    color: #fff;
 }
 
 @media (max-width: 1060px) { /*MEDIUM (TABLET) WIDTH*/

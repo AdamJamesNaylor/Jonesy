@@ -4,6 +4,7 @@ namespace AJN.Jonesy.Website.Controllers {
     using System.Web.Mvc;
     using Business;
     using Business.Services;
+    using Model;
 
     public class QuestionController
         : Controller {
@@ -16,6 +17,9 @@ namespace AJN.Jonesy.Website.Controllers {
         public ActionResult Get(int id) {
 
             var question = _questionService.Get(id);
+
+            if (question == null)
+                return HttpNotFound();
 
             if (question.IsCanonical)
                 return View(question);
@@ -31,6 +35,22 @@ namespace AJN.Jonesy.Website.Controllers {
             var question = _questionService.Get(id);
 
             return View("redirect", question);
+        }
+
+        [Route("questions/add/{year}/{month}/{day}")]
+        public ActionResult Add(string year, string month, string day) {
+            if (DateTime.Now.ToString("yyyyMMdd") != year + month + day)
+                return HttpNotFound();
+
+            return View();
+        }
+
+        [HttpPost]
+        [Route("questions/add")]
+        public ActionResult Add(Question model) {
+            var result = _questionService.Add(model);
+            
+            return View(result);
         }
 
         private readonly IQuestionService _questionService;

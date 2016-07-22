@@ -9,9 +9,10 @@
     public class QuestionService
         : IQuestionService {
 
-        public QuestionService(string appDataPath, IQuestionXmlParser questionXmlParser) {
+        public QuestionService(string appDataPath, IQuestionXmlParser questionXmlParser, ITagService tagService) {
             _appDataPath = appDataPath;
             _questionXmlParser = questionXmlParser;
+            _tagService = tagService;
         }
 
         public Question Get(int id) {
@@ -29,7 +30,17 @@
             var result = _questionXmlParser.Parse(question);
             result.SimilarQuestions = GetSimilarQuestions(result);
             result.EquivalentQuestions = GetEquivalentQuestions(result);
+            result.Tags = GetTags(question);
             return result;
+        }
+
+        private Collection<Tag> GetTags(XElement question) {
+            var tags = question.Attribute("tags");
+            if (tags == null)
+                return null;
+
+            var tagIds = tags.Value.Split(',').Select(int.Parse);
+            return _tagService.Get(tagIds);
         }
 
         public Collection<Question> GetPopularQuestions() {
@@ -47,6 +58,29 @@
                 popularQuestions = popularQuestions.Where(q => q.IsCanonical());
 
             return popularQuestions.Select(_questionXmlParser.Parse).ToCollection();
+        }
+
+        public Question Add(Question model) {
+            string filePath = Path.Combine(_appDataPath, "questions.xml");
+            var questions = XElement.Load(filePath);
+
+            var highestQuestionId = questions.Descendants("question").Max(q => int.Parse(q.Attribute("id").Value));
+            model.Id = highestQuestionId + 1;
+
+            var xmlQuestion = model.ToXElement();
+            questions.Add(xmlQuestion);
+
+            if (model.CanonicalQuestionId != 0) {
+                var canonicalQuestion = questions.Descendants("question").First(q => q.Attribute("id").Value == model.CanonicalQuestionId.ToString());
+                var equivalentQuestions = canonicalQuestion.Attribute("equivalentQuestions").Value;
+                if (!equivalentQuestions.Split(',').Contains(model.Id.ToString())) {
+                    canonicalQuestion.Attribute("equivalentQuestions").Value = equivalentQuestions + "," + model.Id;
+                }
+            }
+
+            questions.Save(filePath);
+
+            return _questionXmlParser.Parse(xmlQuestion);
         }
 
         public Collection<Question> GetSimilarQuestions(Question question) {
@@ -77,6 +111,7 @@
 
         private readonly string _appDataPath;
         private readonly IQuestionXmlParser _questionXmlParser;
+        private readonly ITagService _tagService;
     }
 
 }

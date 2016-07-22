@@ -1,0 +1,65 @@
+﻿@model AJN.Jonesy.Model.Question
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Add</title>
+
+    <style type="text/css">
+        .wide > input {
+            width: 1000px;
+        }
+    </style>
+</head>
+<body>
+    <a href="/">Home</a>
+
+@using (Html.BeginForm("Add", "Question", FormMethod.Post)) {
+
+    <div class="form-horizontal">
+        <h4>Question</h4>
+        <div class="form-group">
+            @Html.LabelFor(model => model.Text)
+            <div class="col-md-10 wide">
+                @Html.EditorFor(model => model.Text)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.CanonicalQuestionId)
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.CanonicalQuestionId)
+            </div>
+        </div>
+
+        <h4>Answer</h4>
+        <div class="form-group">
+            @Html.LabelFor(model => model.Answer.Text)
+            <div class="col-md-10 wide">
+                @Html.EditorFor(model => model.Answer.Text)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Answer.Details)
+            <div class="col-md-10 wide">
+                @Html.EditorFor(model => model.Answer.Details, new { style = "width: 1000px;" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-default"/>
+            </div>
+        </div>
+    </div>
+}
+
+</body>
+</html>

@@ -14,7 +14,8 @@ namespace AJN.Jonesy.Website {
             builder.Register<IQuestionXmlParser>(c => new QuestionXmlParser()).InstancePerRequest();
 
             var appDataPath = HostingEnvironment.MapPath("~/app_data");
-            builder.Register<IQuestionService>(c => new QuestionService(appDataPath, c.Resolve<IQuestionXmlParser>())).InstancePerRequest();
+            builder.Register<ITagService>(c => new TagService(appDataPath)).InstancePerRequest();
+            builder.Register<IQuestionService>(c => new QuestionService(appDataPath, c.Resolve<IQuestionXmlParser>(), c.Resolve<ITagService>())).InstancePerRequest();
 
             builder.RegisterControllers(typeof(QuestionController).Assembly);
 

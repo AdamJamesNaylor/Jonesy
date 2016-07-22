@@ -3,6 +3,7 @@ using System.Web.Routing;
 
 namespace AJN.Jonesy.Website {
     using System;
+    using System.Web;
 
     public class MvcApplication : System.Web.HttpApplication {
         protected void Application_Start() {
@@ -12,6 +13,11 @@ namespace AJN.Jonesy.Website {
         }
 
         protected void Application_BeginRequest(object sender, EventArgs e) {
+            var context = HttpContext.Current;
+            if (context != null) {
+                var routeData = RouteTable.Routes.GetRouteData(new HttpContextWrapper(context));
+            }
+
             if (!Request.Url.Host.StartsWith("www") || Request.Url.IsLoopback)
                 return;
 

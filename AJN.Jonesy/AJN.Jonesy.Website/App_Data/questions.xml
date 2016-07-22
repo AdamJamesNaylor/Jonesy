@@ -1,12 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
 <questions>
-  <question id="123">
+  <question id="123" tags="3">
     <text>How many items can be stored in the inventory?</text>
     <answer>
       <text><![CDATA[<p>37 stacks &amp; 4 pieces of armour.</p>]]></text>
-      <details>
-        <![CDATA[<p>27 stacks can be stored in the main inventory, 9 in the hotbar, 1 off-hand slot and 4 armour slots. Giving a potential maximum of 2372 individual items.</p>]]>
-      </details>
-    <!--<sources>
+      <details><![CDATA[<p>27 stacks can be stored in the main inventory, 9 in the hotbar, 1 off-hand slot and 4 armour slots. Giving a potential maximum of 2372 individual items.</p>]]></details>
+      <!--<sources>
       <source>
         <url>https://www.youtube.com/watch?v=DAcjV60RnRw</url>
         <comment><![CDATA[<p>Here's proof of how many can be stored.</p>]]></comment>
@@ -24,14 +23,11 @@
       </verified>
     </audit>
   </question>
-  
-  <question id="1234" equivalentQuestions="9,10">
+  <question id="1234" equivalentQuestions="9,10,1235" tags="2">
     <text>How many items can be stored in a double chest?</text>
     <answer>
       <text><![CDATA[<p>54 stacks.</p>]]></text>
-      <details>
-        <![CDATA[<p>54 stacks of items works out as a total of 3456 individual items. Assuming all items can be stacked up to 64.</p>]]>
-      </details>
+      <details><![CDATA[<p>54 stacks of items works out as a total of 3456 individual items. Assuming all items can be stacked up to 64.</p>]]></details>
     </answer>
     <audit>
       <created datetime="2016-07-05T17:30" by="0"></created>
@@ -41,14 +37,11 @@
       </verified>
     </audit>
   </question>
-
-  <question id="1">
+  <question id="1" tags="3">
     <text>How fast can the player run?</text>
     <answer>
       <text><![CDATA[<p>About 5.612 blocks per second.</p>]]></text>
-      <details>
-        <![CDATA[<p>Sprinting is 30% faster than walking.</p>]]>
-      </details>
+      <details><![CDATA[<p>Sprinting is 30% faster than walking.</p>]]></details>
     </answer>
     <audit>
       <created datetime="2016-07-05T17:30" by="0"></created>
@@ -58,28 +51,22 @@
       </verified>
     </audit>
   </question>
-
-  <question id="2">
+  <question id="2" tags="3">
     <text>What's the fastest form of travel over long distance?</text>
     <answer>
       <text><![CDATA[<p>Throwing ender pearls.</p>]]></text>
-      <details>
-        <![CDATA[<p>A thrown ender pearl has a chance of traveling up to slightly over 54 blocks, with a flight time of around 3 seconds. This gives a travel speed of 54 / 3 = ~18 blocks per second.</p>]]>
-      </details>
+      <details><![CDATA[<p>A thrown ender pearl has a chance of traveling up to slightly over 54 blocks, with a flight time of around 3 seconds. This gives a travel speed of 54 / 3 = ~18 blocks per second.</p>]]></details>
     </answer>
     <audit>
       <created datetime="2016-07-05T17:30" by="0"></created>
       <modified datetime="2016-07-05T17:30" by="0"></modified>
     </audit>
   </question>
-
-  <question id="3">
+  <question id="3" tags="4">
     <text>Which blocks are effected by gravity?</text>
     <answer>
       <text><![CDATA[<p>Sand, gravel, dragon eggs and anvils.</p>]]></text>
-      <details>
-        <![CDATA[<p>TNT blocks won't fall until they are primed.</p>]]>
-      </details>
+      <details><![CDATA[<p>TNT blocks won't fall until they are primed.</p>]]></details>
     </answer>
     <audit>
       <created datetime="2016-07-05T17:30" by="0"></created>
@@ -89,14 +76,11 @@
       </verified>
     </audit>
   </question>
-
-  <question id="4">
+  <question id="4" tags="3">
     <text>How do you drop a stack of items?</text>
     <answer>
       <text><![CDATA[<p>Ctrl + Q.</p>]]></text>
-      <details>
-        <![CDATA[<p>You can also drop stacks by picking one up in the inventory screen and clicking outside the inventory window. Also exiting the inventory screen once a stack has been picked up will drop it.</p>]]>
-      </details>
+      <details><![CDATA[<p>You can also drop stacks by picking one up in the inventory screen and clicking outside the inventory window. Also exiting the inventory screen once a stack has been picked up will drop it.</p>]]></details>
     </answer>
     <audit>
       <created datetime="2016-07-05T17:30" by="0"></created>
@@ -106,14 +90,11 @@
       </verified>
     </audit>
   </question>
-
   <question id="5">
     <text>How popular is Minecraft?</text>
     <answer>
       <text><![CDATA[<p>Minecraft is the second best selling computer game on all platforms.</p>]]></text>
-      <details>
-        <![CDATA[<p>Second only to Tetris and selling 106.86 million copies world wide.</p>]]>
-      </details>
+      <details><![CDATA[<p>Second only to Tetris and selling 106.86 million copies world wide.</p>]]></details>
     </answer>
     <audit>
       <created datetime="2016-07-05T17:30" by="0"></created>
@@ -123,14 +104,11 @@
       </verified>
     </audit>
   </question>
-
-  <question id="6">
+  <question id="6" equivalentQuestions="1237">
     <text>How do you get Minecraft?</text>
     <answer>
-      <text><![CDATA[<p>Minecraft can be purchased from the Minecraft.net store.</p>]]></text>
-      <details>
-        <![CDATA[<p>Alternatively you can buy download cards from certain stores which you can use to redeem online.</p>]]>
-      </details>
+      <text><![CDATA[<p>Minecraft can be purchased from the <a href="https://www.minecraft.net/">minecraft.net</a> store.</p>]]></text>
+      <details><![CDATA[<p>Alternatively you can buy download cards from certain stores which you can use to redeem online.</p>]]></details>
     </answer>
     <audit>
       <created datetime="2016-07-05T17:30" by="0"></created>
@@ -140,14 +118,11 @@
       </verified>
     </audit>
   </question>
-
   <question id="7">
     <text>What age is Minecraft rated for?</text>
     <answer>
       <text><![CDATA[<p>PEGI 7.</p>]]></text>
-      <details>
-        <![CDATA[<p>Although you have to be 13 to purchase an account with Mojang you do not need to be this age to play.</p>]]>
-      </details>
+      <details><![CDATA[<p>Although you have to be 13 to purchase an account with Mojang you do not need to be this age to play.</p>]]></details>
     </answer>
     <audit>
       <created datetime="2016-07-05T17:30" by="0"></created>
@@ -157,14 +132,11 @@
       </verified>
     </audit>
   </question>
-
   <question id="8">
     <text>How much does Minecraft cost?</text>
     <answer>
       <text><![CDATA[<p>&#36;26.95 USD.</p>]]></text>
-      <details>
-        <![CDATA[<p>Check Minecraft.net for your local exchange rates.</p>]]>
-      </details>
+      <details><![CDATA[<p>Check Minecraft.net for your local exchange rates.</p>]]></details>
     </answer>
     <audit>
       <created datetime="2016-07-05T17:30" by="0"></created>
@@ -174,7 +146,6 @@
       </verified>
     </audit>
   </question>
-
   <question id="9" canonicalQuestion="1234">
     <text>How many items can you store in a double chest?</text>
     <audit>
@@ -182,7 +153,6 @@
       <modified datetime="2016-07-05T17:30" by="0"></modified>
     </audit>
   </question>
-
   <question id="10" canonicalQuestion="1234">
     <text>How many items can I store in a double chest?</text>
     <audit>
@@ -190,15 +160,11 @@
       <modified datetime="2016-07-05T17:30" by="0"></modified>
     </audit>
   </question>
-
-  <question id="11">
+  <question id="11" tags="4">
     <text>Which blocks can Endermen pick up?</text>
     <answer>
       <text><![CDATA[<p>Endermen can only pick up the following blocks; Allium, Azure Bluet, Blue Orchid, Dandelion, Orange Tulip, Red Tulip, Pink Tulip, White Tulip, Oxeye Daisy, Poppy, Cactus, Clay, Coarse Dirt, Dirt, Grass Block, Gravel, Melon (block), Pumpkin, Mycelium, Podzol, Red Mushroom, Brown Mushroom, Red Sand, Sand, TNT and Netherrack.</p>]]></text>
-      <details>
-        <![CDATA[<p>Endermen will drop the block they are carrying when they are killed.</p>]]>
-      </details>
-
+      <details><![CDATA[<p>Endermen will drop the block they are carrying when they are killed.</p>]]></details>
     </answer>
     <audit>
       <created datetime="2016-07-18T22:50" by="0" />
@@ -208,15 +174,11 @@
       </verified>
     </audit>
   </question>
-
-  <question id="12">
+  <question id="12" tags="1">
     <text>At what light level can mushrooms grow?</text>
     <answer>
       <text><![CDATA[<p>A light level of 12 or lower.</p>]]></text>
-      <details>
-        <![CDATA[<p>Mushrooms will not grow directly underneath sky.</p>]]>
-      </details>
-
+      <details><![CDATA[<p>Mushrooms will not grow directly underneath sky.</p>]]></details>
     </answer>
     <audit>
       <created datetime="2016-07-18T22:55" by="0" />
@@ -226,15 +188,11 @@
       </verified>
     </audit>
   </question>
-
   <question id="13">
     <text>How can you get the seed of a world?</text>
     <answer>
       <text><![CDATA[<p>Use the <code>/seed</code> command.</p>]]></text>
-      <details>
-        <![CDATA[<p>You can also view the seed of a world if you are able to select it in the Select world screen and then press <button>Re-create</button> and then <button>More world options</button>.</p>]]>
-      </details>
-
+      <details><![CDATA[<p>You can also view the seed of a world if you are able to select it in the Select World screen, press <button>Re-Create</button> and then press <button>More World Options...</button>.</p>]]></details>
     </answer>
     <audit>
       <created datetime="2016-07-18T23:36" by="0" />
@@ -244,15 +202,11 @@
       </verified>
     </audit>
   </question>
-  
   <question id="14">
     <text>What is a snapshot?</text>
     <answer>
       <text><![CDATA[<p>An experimental pre-release of the game prior to an official update.</p>]]></text>
-      <details>
-        <![CDATA[<p>Snapshots are a way for the developers of the game to get early feedback and testing of features prior to them being added to the game.</p>]]>
-      </details>
-
+      <details><![CDATA[<p>Snapshots are a way for the developers of the game to get early feedback and testing of features prior to them being added to the game.</p>]]></details>
     </answer>
     <audit>
       <created datetime="2016-07-19T08:00" by="0" />
@@ -262,15 +216,11 @@
       </verified>
     </audit>
   </question>
-
-  <question id="15">
+  <question id="15" tags="3">
     <text>How do you complete Minecraft?</text>
     <answer>
       <text><![CDATA[<p>Defeat the Ender Dragon.</p>]]></text>
-      <details>
-        <![CDATA[<p>Although killing the Ender Dragon is the end of the game the player is free to continue playing and even respawning the Ender Dragon for continual fights.</p>]]>
-      </details>
-
+      <details><![CDATA[<p>Although killing the Ender Dragon is the end of the game the player is free to continue playing and even respawning the Ender Dragon for further fights.</p>]]></details>
     </answer>
     <audit>
       <created datetime="2016-07-19T08:10" by="0" />
@@ -280,15 +230,11 @@
       </verified>
     </audit>
   </question>
-
-  <question id="16">
+  <question id="16" tags="3">
     <text>What should be done first in survival mode?</text>
     <answer>
       <text><![CDATA[<p>Gather wood.</p>]]></text>
-      <details>
-        <![CDATA[<p>Wood is the basis for all things required in the early stages of the game, so it is recommended to harvest some trees and craft the wood blocks into wooden planks.</p>]]>
-      </details>
-
+      <details><![CDATA[<p>Wood is the basis for all things required in the early stages of the game, so it is recommended to harvest some trees and craft the wood blocks into wooden planks.</p>]]></details>
     </answer>
     <audit>
       <created datetime="2016-07-19T08:15" by="0" />
@@ -298,15 +244,11 @@
       </verified>
     </audit>
   </question>
-
-  <question id="17">
+  <question id="17" tags="3">
     <text>What should be done second in survival mode?</text>
     <answer>
       <text><![CDATA[<p>Establish a small base camp.</p>]]></text>
-      <details>
-        <![CDATA[<p>If it's your first game, protecting yourself from the dangers of night time is a top priority. After gathering wood, this involves building a basic shelter, some tools and ideally a bed and some lighting to get through the first night.</p>]]>
-      </details>
-
+      <details><![CDATA[<p>If it's your first game, protecting yourself from the dangers of night time is a top priority. After gathering wood, this involves building a basic shelter, some tools and ideally a bed and some lighting to get through the first night.</p>]]></details>
     </answer>
     <audit>
       <created datetime="2016-07-19T08:20" by="0" />
@@ -316,26 +258,21 @@
       </verified>
     </audit>
   </question>
-
-  <question id="18">
+  <question id="18" tags="5">
     <text>How can health be restored?</text>
     <answer>
-      <text>
-        <![CDATA[<p>The many ways to restore health are:
+      <text><![CDATA[<p>The many ways to restore health are:
                   <ul>
                     <li>Health naturally regenerates slowly over time whenever the hunger bar is at 18 or above.</li>
                     <li>The regeneration effect.</li>
                     <li>The absorption effect.</li>
                     <li>The instant health potion.</li>
                   </p>]]></text>
-      <details>
-        <![CDATA[
+      <details><![CDATA[
         <p>Regeneration can be acquired from beacons, potions and golden apples. The unenchanted golden apple provides regeneration at level II which regenerates a maximum of 4 hearts over 5 seconds. The enchanted variety however restores 16 hearts over 20 seconds.</p>
         <p>Unenchanted golden apples provide absorption at level I which gives 4 yellow hearts of absorption for 2 minutes. And enchanted golden apples provide level IV which delivers 16 hearts.</p>
-        <p>The ammount of health delivered by an instant health potion is relative to the source and effect level.</p>
-        ]]>
-      </details>
-
+        <p>The amount of health delivered by an instant health potion is relative to the source and effect level.</p>
+        ]]></details>
     </answer>
     <audit>
       <created datetime="2016-07-19T13:00" by="0" />
@@ -345,6 +282,54 @@
       </verified>
     </audit>
   </question>
-
-
+  <question id="1235" canonicalQuestion="1234">
+    <text>How many items can Steve store in a double chest?</text>
+    <audit>
+      <created datetime="2016-07-20T11:49" by="0" />
+      <modified datetime="2016-07-20T11:49" by="0" />
+      <verified datetime="2016-07-20T11:49" by="0">
+        <version edition="Computer" releaseNumber="1.10" />
+      </verified>
+    </audit>
+  </question>
+  <question id="1236">
+    <text>How do you download Minecraft for free?</text>
+    <audit>
+      <created datetime="2016-07-20T21:26" by="0" />
+      <modified datetime="2016-07-20T21:26" by="0" />
+      <verified datetime="2016-07-20T21:26" by="0">
+        <version edition="Computer" releaseNumber="1.10" />
+      </verified>
+    </audit>
+    <answer>
+      <text><![CDATA[<p>Download the demo from <a href="https://minecraft.net/demo/">minecraft.net</a>.</p>]]></text>
+      <details><![CDATA[The only legal way to play Minecraft for free is to create a Mojang account and download the limited (5 in-game days) demo of the game.]]></details>
+    </answer>
+  </question>
+  <question id="1237" canonicalQuestion="6">
+    <text>How do you download Minecraft?</text>
+    <audit>
+      <created datetime="2016-07-20T21:30" by="0" />
+      <modified datetime="2016-07-20T21:30" by="0" />
+    </audit>
+  </question>
+  <question id="1238">
+    <text>Where can I get a Minecraft server list?</text>
+    <audit>
+      <created datetime="2016-07-20T21:44" by="0" />
+      <modified datetime="2016-07-20T21:44" by="0" />
+      <verified datetime="2016-07-20T21:44" by="0">
+        <version edition="Computer" releaseNumber="1.10" />
+      </verified>
+    </audit>
+    <answer>
+      <text><![CDATA[<ul>
+          <li><a href="http://minecraftservers.org/">minecraftservers.org</a></li>
+          <li><a href="http://minecraft-server-list.com/">minecraft-server-list.com</a></li>
+          <li><a href="http://minecraft-mp.com/">minecraft-mp.com</a></li>
+          <li><a href="http://minecraft-server.net/">minecraft-server.net</a></li>
+        </ul>]]></text>
+      <details>These websites list Minecraft servers which players can join and vote for.</details>
+    </answer>
+  </question>
 </questions>

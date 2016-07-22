@@ -1,0 +1,21 @@
+﻿span.tag, .chests {
+    background-position: -704px -1216px;
+}
+
+span.tag .mushrooms {
+    background-position: -160px -1058px;
+}
+span.tag .gameplay {
+    background-image: url('/Content/Images/MiscSprite.png');
+    background-position: 0 0;
+}
+span.tag .blocks {
+    background-position: -640px -960px;
+}
+span.tag .health {
+    background-image: url('/Content/Images/icons.png');
+    background-position: -104px 0;
+    width: 16px;
+    height: 16px;
+    margin: 9px;
+}

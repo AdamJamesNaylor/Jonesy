@@ -7,5 +7,6 @@
         Collection<Question> GetSimilarQuestions(Question question);
         Collection<Question> GetPopularQuestions();
         Collection<Question> List(bool excludeNonCanonical = true);
+        Question Add(Question model);
     }
 }

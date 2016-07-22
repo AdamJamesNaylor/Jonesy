@@ -1,4 +1,5 @@
-﻿@using System.Text.RegularExpressions
+﻿@using System.Globalization
+@using System.Text.RegularExpressions
 @using AJN.Jonesy.Business
 @using AJN.Jonesy.Common
 @model AJN.Jonesy.Model.Question
@@ -16,16 +17,17 @@
     <meta name="twitter:title" property="og:title" itemprop="title name" content="@ViewBag.Title" />
     <meta name="twitter:description" property="og:description" itemprop="description" content="@description "/>
     <meta name="description" content="@description">
-    <meta property="og:url" content="http://minecraftanswered.imbick.com@(QuestionUrlParser.Generate(Model))" />
+    <meta property="og:url" content="http://minecraftanswered.imbick.com@(QuestionUrlParser.Generate(Model))"/>
+    <link rel="stylesheet" type="text/css" href="/Content/Styles/tags.css">
 }
 
 <div class="column" itemscope itemtype="http://schema.org/Question">
     <h1 itemprop="name">
         <a href="@QuestionUrlParser.Generate(Model)" class="question-hyperlink">@Model.Text</a>
     </h1>
-    <div class="audit">
-        Asked on <span itemprop="dateCreated" title="@Model.Audit.Created.On.ToString(fullDateTimePattern)">@Model.Audit.Created.On.ToString(longDatePattern)</span><!-- by <span itemprop="creator">Admin</span>-->
-    </div>
+    <span class="audit">
+        Asked on <span itemprop="dateCreated" title="@Model.Audit.Created.On.ToString(fullDateTimePattern, CultureInfo.InvariantCulture)">@Model.Audit.Created.On.ToString(longDatePattern, CultureInfo.InvariantCulture)</span><!-- by <span itemprop="creator">Admin</span>-->
+    </span>
     <span style="display:none;" itemprop="answerCount">1</span>
 </div>
 
@@ -52,7 +54,20 @@
             }
         </div>
 
-        <div class="audit answered">
+        <span class="tags">
+            @if (Model.Tags != null) {
+                foreach (var tag in Model.Tags) {
+                    <a href="/tags/@tag.Id/@tag.Name" title="View all questions about @tag.Name">
+                        <span class="tag" title="@tag.Description">
+                            @if (tag.Icon != null)
+                            {<span class="@tag.Icon.CssClass" title="@tag.Description"></span>}
+                            @tag.Name
+                        </span></a>
+                }
+            }
+        </span>
+
+        <span class="audit answered">
             Answered on <span itemprop="dateCreated" title="@Model.Audit.Created.On.ToString(fullDateTimePattern)">@Model.Audit.Created.On.ToString(longDatePattern)</span><!-- by <span itemprop="creator">Admin</span>-->
         </div>
         @*if (Model.Audit.IsVerified) {

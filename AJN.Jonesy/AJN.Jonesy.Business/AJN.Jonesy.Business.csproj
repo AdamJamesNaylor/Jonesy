@@ -45,8 +45,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\IQuestionService.cs" />
     <Compile Include="Services\IQuestionXmlParser.cs" />
+    <Compile Include="Services\ITagService.cs" />
     <Compile Include="Services\QuestionService.cs" />
     <Compile Include="Services\QuestionXmlParser.cs" />
+    <Compile Include="Services\TagService.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\AJN.Common\AJN.Common.csproj">
